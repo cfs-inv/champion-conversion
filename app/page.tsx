@@ -7,6 +7,8 @@ import { cities } from "@/app/data/cityData";
 import Image from "next/image";
 import { Metadata } from "next";
 import { Suspense } from "react";
+import Reviews from "./components/Reviews";
+import FinalCTA from "./components/FinalCTA";
 
 const cityData = cities.california;
 
@@ -28,9 +30,9 @@ export default function Home() {
         ========================================================= */}
 
         <section className="champion-hero">
-          <div className="champion-container">
+          <div className="champion-container ">
 
-           <div className="champion-brand-heading">
+           <div id="top" className="champion-brand-heading">
   <Image
     src="/images/championlogo_web.webp"
     alt="Champion Cash Loans"
@@ -173,6 +175,8 @@ export default function Home() {
   </div>
 </section>
 
+<Reviews reviews={cityData.reviews} />
+
 
         {/* =========================================================
             STEPS + FAQ
@@ -243,6 +247,9 @@ export default function Home() {
             }),
           }}
         />
+
+        <FinalCTA />
+
 
       </main>
 

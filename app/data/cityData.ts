@@ -105,6 +105,28 @@ your scheduled payments.`,
           "Yes. If your loan is approved, you can keep your vehicle and continue using it while making your payments.",
       },
     ],
+
+     reviews: [
+      {
+        name: "Julie Miller",
+        stars: 5,
+        date: "2026-05-12",
+        text: "Such an easy process and Adriana P. was great to work with and super helpful!"
+      },
+      {
+        name: "Wes Purvis",
+        stars: 5,
+        date: "2026-05-03",
+        text: "The process was smooth and easy, and I was able to take care of what I needed by the deadline."
+      },
+      {
+        name: "Jose Luis Solano",
+        stars: 5,
+        date: "2026-05-03",
+        text: "Thank you for the service, Adriana treated me very well and took the time to assist me."
+      }
+    ]
+
   },
 
   californiaSpanish: {
