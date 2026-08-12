@@ -1,67 +1,97 @@
-import Navbar from "@/app/components/Navbar";
-import Footer from "@/app/components/Footer";
-import LoanTimeline from "@/app/components/LoanTimeline";
+import Footer from "../components/Footer";
 
 export default function FinalThankYouPage() {
   return (
     <>
-      <Navbar />
+    <main className="champion-final-thank-you">
 
-      <main>
-        <section className="thank-you-page">
-          <LoanTimeline currentStep={2} />
+      <section className="champion-final-header">
+        <h1>Your Application Is Under Review</h1>
 
-          <div className="thank-you-card">
-
-  <h1>Your Application Is Under Review</h1>
-
-  <p className="lead">
-    Thank you for completing your application.
-  </p>
-
-</div>
-
-<div className="review-grid">
-  <div className="info-card">
-    <h3>What Happens Next</h3>
-
-      <p>
-    Our team will begin reviewing your information and
-    will contact you if any additional documentation
-    or verification is needed.
-  </p>
-
-  </div>
-
-  <div className="info-card">
-    <h3>What You Should Do</h3>
-
-    <ul>
-      <li>✓ Keep your phone nearby</li>
-      <li>✓ Check your email regularly today</li>
-      <li>✓ Have documents ready if requested</li>
-    </ul>
-  </div>
-</div>
-
-<div className="contact-card">
-  <h3>Need Immediate Assistance?</h3>
-
-  <p>
-    If you have questions about your application,
-    our team is ready to help.
-  </p>
-
-  <a href="tel:+18888121076" className="btn-confirm">
-    Call Us Now
-  </a>
-</div>
+        <p>
+          Thank you for completing your application.
+          Our team will review your information and be in touch soon.
+        </p>
+      </section>
 
 
-        </section>
-      </main>
+      <section className="champion-final-grid">
 
-      <Footer />
+        {/* COLUMN 1 */}
+        <article className="champion-final-card">
+          <div className="champion-final-image">
+            <img
+              src="/images/whn.webp"
+              alt="Champion representative reviewing an application"
+            />
+          </div>
+
+          <div className="champion-final-content">
+            <h2>What Happens Next</h2>
+
+            <p>
+              Our team will begin reviewing your information and
+              will contact you if any additional documentation
+              or verification is needed.
+            </p>
+          </div>
+        </article>
+
+
+        {/* COLUMN 2 */}
+        <article className="champion-final-card">
+          <div className="champion-final-image">
+            <img
+              src="/images/kae.webp"
+              alt="Champion representative checking a phone"
+            />
+          </div>
+
+          <div className="champion-final-content">
+            <h2>What You Should Do</h2>
+
+            <ul>
+              <li>✓ Keep your phone nearby</li>
+              <li>✓ Check your email regularly</li>
+              <li>✓ Have documents ready if requested</li>
+            </ul>
+          </div>
+        </article>
+
+
+        {/* COLUMN 3 */}
+        <article className="champion-final-card champion-final-help">
+          <div className="champion-final-image">
+            <img
+              src="/images/nhwya.webp"
+              alt="Champion representative ready to help"
+            />
+          </div>
+
+          <div className="champion-final-content">
+            <h2>Need Help With Your Application?</h2>
+
+            <p>
+              Have questions about your application?
+              Our team is ready to help.
+            </p>
+
+            <a
+              href="tel:+18887981970"
+              className="champion-final-button"
+            >  
+              ☎ CALL US (888) 798-1970
+            </a>
+          </div>
+
+          
+
+        </article>
+      
+      </section>
+    </main>
+
+    <Footer />
     </>
   );
 }

@@ -14,6 +14,20 @@ html{
 
 body{
 font-family: "Montserrat", sans-serif;
+background:
+    radial-gradient(
+      circle at 80% 5%,
+      rgba(250, 249, 250, 0.95) 0%,
+      rgba(220, 221, 221, 0) 42%
+    ),
+    radial-gradient(
+      circle at 10% 80%,
+      rgba(250, 249, 250, 0.95) 0%,
+      rgba(220, 221, 221, 0) 50%
+    ),
+    #faf9fa;
+
+  color: #fff;
 
 }
 
@@ -2748,8 +2762,501 @@ text-align: left;
 }
 
 
+/* =========================================================
+   CHAMPION APPLICATION COMPLETED
+   ========================================================= */
+
+.champion-completed {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 35px 30px 70px;
+}
 
 
+/* =========================================================
+   CONTACT BOX
+   ========================================================= */
+
+.champion-completed-contact {
+  position: absolute;
+  top: 25px;
+  right: 30px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+
+  padding: 18px 32px;
+
+  background: transparent;
+  border: 1px solid #f04236;
+  border-radius: 48px;
+
+  font-family: "basic-sans", sans-serif;
+  font-size: 13px;
+}
+
+.champion-completed-contact span {
+  color: #393b3c;
+}
+
+.champion-completed-contact a {
+  color: #006738;
+  font-weight: 800;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.champion-completed-contact a:hover {
+  color: #ef4036;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.champion-completed-hero {
+  display: grid;
+  grid-template-columns: 42% 58%;
+  align-items: center;
+
+  margin-top: 40px;
+  min-height: 420px;
+
+  gap: 30px;
+}
+
+
+/* IMAGE */
+
+.champion-completed-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.champion-completed-image img {
+  display: block;
+  width: 75%;
+  max-width: 390px;
+  height: auto;
+}
+
+
+/* MESSAGE */
+
+.champion-completed-message {
+  padding: 20px 15px;
+}
+
+.champion-completed-message h1 {
+  margin: 0 0 14px;
+
+  color: #006738;
+
+  font-family: "Century Gothic", sans-serif;
+  font-size: 38px;
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+.champion-completed-lead {
+  margin: 0 0 12px;
+
+  color: #393b3c;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.champion-completed-message > p:last-child {
+  margin: 0;
+
+  color: #5f5f5e;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   TIMELINE
+   ========================================================= */
+
+.champion-completed-timeline {
+  width: 50%;
+  max-width: 720px;
+  margin: 0 auto 35px;
+}
+
+
+/* =========================================================
+   REVIEW CARDS
+   ========================================================= */
+
+.champion-completed-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+
+  max-width: 900px;
+  margin: 0 auto 30px;
+}
+
+.champion-completed-card {
+  padding: 28px;
+
+  background: #f3f7f1;
+
+  border: 1px solid rgba(0, 103, 56, 0.10);
+  border-radius: 18px;
+
+  color: #393b3c;
+  text-align: center;
+}
+
+.champion-completed-card h3 {
+  margin: 0 0 12px;
+
+  color: #006738;
+
+  font-family: "Century Gothic", sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.champion-completed-card p {
+  margin: 0;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.champion-completed-card ul {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  line-height: 2;
+}
+
+
+/* =========================================================
+   CONTACT CTA
+   ========================================================= */
+
+.champion-completed-cta {
+  max-width: 700px;
+  margin: 35px auto 0;
+  padding: 28px;
+
+  background: #f3f7f1;
+
+  border: 1px solid rgba(0, 103, 56, 0.10);
+  border-radius: 18px;
+
+  text-align: center;
+}
+
+.champion-completed-cta h2 {
+  margin: 0 0 8px;
+
+  color: #006738;
+
+  font-family: "Century Gothic", sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.champion-completed-cta p {
+  margin: 0 0 18px;
+
+  color: #5f5f5e;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.champion-completed-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 13px 28px;
+
+  border-radius: 24px;
+
+  background: #ef4036;
+  color: #fff;
+
+  font-family: "Century Gothic", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+
+  text-decoration: none;
+
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.champion-completed-button:hover {
+  background: #006738;
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   CHAMPION FINAL THANK YOU
+   ========================================================= */
+
+.champion-final-thank-you {
+  max-width: 1250px;
+  margin: 0 auto;
+  padding: 30px 35px 30px;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.champion-final-header {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto 30px;
+  text-align: center;
+}
+
+
+.champion-final-header h1 {
+  margin: 0 0 14px;
+
+  color: #006738;
+
+  font-family: "Century Gothic", sans-serif;
+  font-size: 42px;
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+
+.champion-final-header p {
+  max-width: 800px;
+  margin: 0 auto;
+
+  color: #5f5f5e;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   THREE COLUMN GRID
+   ========================================================= */
+
+.champion-final-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+
+  width: 100%;
+}
+
+
+/* =========================================================
+   CARDS
+   ========================================================= */
+
+.champion-final-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  min-height: 470px;
+
+  padding: 28px 28px 32px;
+
+  background: #d2e8de;
+  border: 1px solid rgba(0, 103, 56, 0.10);
+  border-radius: 22px;
+
+  text-align: center;
+
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.06);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.champion-final-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.09);
+}
+
+
+/* =========================================================
+   CHARACTER IMAGES
+   ========================================================= */
+
+.champion-final-image {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+
+  width: 100%;
+  height: 260px;
+
+  margin-bottom: 20px;
+}
+
+
+.champion-final-image img {
+  display: block;
+
+  width: auto;
+  max-width: 100%;
+  height: 260px;
+
+  object-fit: contain;
+}
+
+
+/* =========================================================
+   CARD CONTENT
+   ========================================================= */
+
+.champion-final-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  flex: 1;
+
+  width: 100%;
+}
+
+
+.champion-final-content h2 {
+  margin: 0 0 12px;
+
+  color: #006738;
+
+  font-family: "Century Gothic", sans-serif;
+  font-size: 21px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+
+.champion-final-content p {
+  max-width: 310px;
+  margin: 0;
+
+  color: #383838;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   LIST
+   ========================================================= */
+
+.champion-final-content ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  width: 100%;
+  max-width: 280px;
+
+  margin: 5px auto 0;
+  padding: 0;
+
+  list-style: none;
+
+  color: #383838;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+
+.champion-final-content li {
+  transition: color 0.2s ease;
+}
+
+
+.champion-final-content li:hover {
+  color: #006738;
+}
+
+
+/* =========================================================
+   HELP CARD
+   ========================================================= */
+
+.champion-final-help {
+  background: #f0cfcd;
+  border: 1px solid rgba(239, 64, 54, 0.22);
+}
+
+
+.champion-final-help h2 {
+  color: #006738;
+}
+
+
+/* =========================================================
+   CALL BUTTON
+   ========================================================= */
+
+.champion-final-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 20px;
+  padding: 13px 28px;
+
+  border-radius: 24px;
+
+  background: #ef4036;
+  color: #ffffff;
+
+  font-family: "Century Gothic", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+
+  text-decoration: none;
+  text-transform: uppercase;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.champion-final-button:hover {
+  background: #006738;
+  transform: translateY(-2px);
+}
 
 @media(max-width:768px){
 
@@ -3234,4 +3741,47 @@ min-width:100%;
     font-size: 12px;
   }
 
+  .champion-final-grid {
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+  .champion-final-thank-you {
+    padding: 35px 18px 50px;
+  }
+
+  .champion-final-header {
+    margin-bottom: 30px;
+  }
+
+  .champion-final-header h1 {
+    font-size: 29px;
+  }
+
+  .champion-final-header p {
+    font-size: 14px;
+  }
+
+  .champion-final-grid {
+    gap: 18px;
+  }
+
+  .champion-final-card {
+    padding: 24px 20px 28px;
+    border-radius: 18px;
+  }
+
+  .champion-final-image {
+    height: 240px;
+    margin-bottom: 16px;
+    margin-top: 16px;
+  }
+
+  .champion-final-image img {
+    height: 240px;
+  }
+
+  .champion-final-content h2 {
+    font-size: 19px;
+  }
 }
