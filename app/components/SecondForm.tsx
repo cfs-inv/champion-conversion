@@ -119,7 +119,6 @@ export default function LoanFormStep2() {
       return;
     }
     
-    // Una vez enviado con éxito, es buena práctica limpiar los estados de entrada locales para la siguiente app
     setError("");
   };
 
@@ -144,7 +143,7 @@ export default function LoanFormStep2() {
       {/* (Mapeos Zoho) */}
       <input type="hidden" name="zf_referrer_name" value="" />
       {/* Cambia el valor vacío por la URL de App Completed */}
-<input type="hidden" name="zf_redirect_url" value="https://cashloansexperts.com/appcompleted" />
+<input type="hidden" name="zf_redirect_url" value="https://apply.championcashloans.com/appcompleted" />
       <input type="hidden" name="zc_gad" value="" />
       <input type="hidden" name="SingleLine7" value={leadUUID} />
       <input type="hidden" name="SingleLine8" value="Sent personal Info (Form 2)" />
@@ -252,7 +251,7 @@ export default function LoanFormStep2() {
 
           {error && <p className="form-error">{error}</p>}
           <div className="step-buttons">
-            <button type="button" onClick={() => setStep(1)}>← Back</button>
+            <button type="button"  onClick={() => setStep(1)}>← Back</button>
             <button type="button" className="btn-confirm" onClick={handleNext}>Continue →</button>
           </div>
         </div>

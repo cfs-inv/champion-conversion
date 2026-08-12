@@ -8,70 +8,83 @@ export default function ThankYouPageContent() {
   const [showForm, setShowForm] = useState(false);
 
   return (
-   <section className="champion-thank-you fade-in">
+   <section className="champion-thank-you">
 
-  <LoanTimeline currentStep={showForm ? 2 : 1} />
+    <div className="champion-thank-you-contact">
+  <span>Questions about your application?</span>
+  <a href="tel:+18887981970">☎ CALL US (888) 798-1970</a>
+</div>
 
-  <div className="champion-thank-you-card">
+  <div className="champion-thank-you-hero">
 
-    <div className="champion-thank-you-icon" aria-hidden="true">
-      ✓
+    <div className="champion-thank-you-image">
+      <img
+        src="/images/champ_ty.webp"
+        alt="Thank you"
+      />
     </div>
 
-    <h1>Application Received</h1>
+    <div className="champion-thank-you-content">
 
-    <p className="champion-thank-you-lead">
-      Thank you for submitting your initial application.
-    </p>
-
-    <p className="champion-thank-you-copy">
-      Our team may contact you shortly to discuss available options
-      and answer any questions you may have.
-    </p>
-
-    {!showForm && (
-      <div className="champion-thank-you-cta">
-
-        <h2>Want to speed up the process?</h2>
+      <div className="champion-thank-you-message">
+        <h1>Application Received</h1>
 
         <p>
-          Complete a few additional details about your residence,
-          employment, and income so we can review your application
-          more efficiently.
+          We've received your initial application and our team
+          will review your information shortly.
         </p>
-
-        <button
-          data-track="extend_application"
-          className="champion-thank-you-button"
-          onClick={() => {
-            setShowForm(true);
-
-            setTimeout(() => {
-              const element = document.querySelector(".form-container");
-
-              if (element) {
-                const elementPosition =
-                  element.getBoundingClientRect().top + window.scrollY;
-
-                const offsetPosition = elementPosition - 100;
-
-                window.scrollTo({
-                  top: offsetPosition,
-                  behavior: "smooth",
-                });
-              }
-            }, 100);
-          }}
-        >
-          Continue Full Application →
-        </button>
-
-        <small>⏱ Takes about 3-5 minutes</small>
-
       </div>
-    )}
+
+
+      {!showForm && (
+        <div className="champion-thank-you-cta">
+
+          <h2>⏱ Takes a few minutes to move forward</h2>
+
+          <p>
+            Complete a few additional details about your residence,
+            employment, and income so we can review your application
+            more efficiently.
+          </p>
+
+          <button
+            data-track="extend_application"
+            className="champion-thank-you-button"
+            onClick={() => {
+              setShowForm(true);
+
+              setTimeout(() => {
+                const element = document.querySelector(".champion-form-container");
+
+                if (element) {
+                  const elementPosition =
+                    element.getBoundingClientRect().top + window.scrollY;
+
+                  const offsetPosition = elementPosition - 100;
+
+                  window.scrollTo({
+                    top: offsetPosition,
+                    behavior: "smooth",
+                  });
+                }
+              }, 100);
+            }}
+          >
+            Continue Full Application →
+          </button>
+
+        </div>
+      )}
+
+    </div>
 
   </div>
+
+
+  <div className="champion-thank-you-timeline">
+    <LoanTimeline currentStep={showForm ? 2 : 1} />
+  </div>
+
 
   <div
     className="champion-form-container"

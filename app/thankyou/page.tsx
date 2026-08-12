@@ -5,7 +5,6 @@ import ThankYouPageContent from "@/app/components/ThankYouPageContent";
 export default function HomePage() {
   return (
     <>
-      <Navbar />
 
       <main>
         <ThankYouPageContent />

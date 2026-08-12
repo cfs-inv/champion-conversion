@@ -120,7 +120,7 @@ export default function LoanForm({
       className="loan-form"
     >
       
-<input type="hidden" name="zf_redirect_url" value="https://cashloansexperts.com/thankyou" />
+<input type="hidden" name="zf_redirect_url" value="https://apply.championcashloans.com/thankyou" />
       <input type="hidden" name="zc_gad" value={gclid} readOnly />
       <input type="hidden" name="SingleLine17" value={gclid} readOnly />
 

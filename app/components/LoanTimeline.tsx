@@ -3,7 +3,7 @@ type LoanTimelineProps = {
 };
 
 export default function LoanTimeline({ currentStep }: LoanTimelineProps) {
-  const steps = ["Apply", "Application", "Documents", "Funding"];
+  const steps = ["Contact Info", "Application", "Documents", "Funding"];
 
   const progress = ((currentStep - 1) / (steps.length - 1)) * 100;
 

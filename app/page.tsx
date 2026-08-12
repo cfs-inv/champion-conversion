@@ -116,8 +116,9 @@ export default function Home() {
   <LoanForm
     slug="california"
     attribution={{
-      mainSource: "Google Ads",
+      mainSource: "CFS Google Ads",
       trafficSource: "landing-california",
+      brand: "Champion",
     }}
   />
 </Suspense>

@@ -555,7 +555,7 @@ button {
   background-color: #393b3c;
   color: #fff;
 
-  border-radius: 36px;
+  border-radius: 24px;
   padding: 20px;
 
   text-transform: uppercase;
@@ -563,6 +563,7 @@ button {
 
   transition: all 0.25s ease;
 }
+
 
 .contact-card .btn-confirm:hover{
   background-color: #5fa820;
@@ -1930,7 +1931,7 @@ text-align: left;
 }
 
 .step.completed {
-  color: #22c55e;
+  color: #006738;
   font-weight: 600;
 }
 
@@ -1959,7 +1960,7 @@ text-align: left;
 
 .timeline-fill {
   height: 100%;
-  background: #258e4a;
+  background: #006738;
   width: 0;
   transition: width 0.8s ease;
 }
@@ -1973,145 +1974,117 @@ text-align: left;
 
 
 /* =========================================================
-   CHAMPION THANK YOU PAGE
+   CHAMPION THANK YOU
    ========================================================= */
+
 
 .champion-thank-you {
-  max-width: 1100px;
+  position: relative;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 50px 20px 70px;
-  color: #232323;
+  padding: 35px 30px 70px;
 }
 
 
 /* =========================================================
-   MAIN CARD
+   Contact box
    ========================================================= */
 
-.champion-thank-you-card {
-  max-width: 760px;
-  margin: 35px auto 0;
-  padding: 45px 50px;
-  text-align: center;
-
-  background: #ffffff;
-  border-radius: 24px;
-
-  box-shadow:
-    0 12px 40px rgba(0, 0, 0, 0.07);
-}
-
-
-/* =========================================================
-   SUCCESS ICON
-   ========================================================= */
-
-.champion-thank-you-icon {
-  width: 64px;
-  height: 64px;
-
-  margin: 0 auto 22px;
+.champion-thank-you-contact {
+  position: absolute;
+  top: 25px;
+  right: 30px;
 
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
 
-  border-radius: 50%;
+  padding: 18px 32px;
 
-  background: #006738;
-  color: #ffffff;
+  background: transparent;
+  border: 1px solid #f04236;
+  border-radius: 48px;
 
-  font-family: "Montserrat", sans-serif;
-  font-size: 30px;
-  font-weight: 700;
+  font-family: "basic-sans", sans-serif;
+  font-size: 13px;
+  
+}
 
-  box-shadow:
-    0 8px 22px rgba(0, 103, 56, 0.18);
+.champion-thank-you-contact span {
+  color: #393b3c;
+}
+
+.champion-thank-you-contact a {
+  color: #006738;
+  font-weight: 800;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.champion-thank-you-contact a:hover {
+  color: #ef4036;
 }
 
 
-/* =========================================================
-   HEADLINE
-   ========================================================= */
+/* HERO */
 
-.champion-thank-you-card h1 {
-  margin: 0 0 14px;
+.champion-thank-you-hero {
+  display: grid;
+  grid-template-columns: 42% 58%;
+  align-items: center;
+  margin-top: 40px;
+  min-height: 500px;
 
-  color: #232323;
+  gap: 30px;
+}
 
-  font-family: "komet", sans-serif;
-  font-size: 40px;
+
+/* IMAGE */
+
+.champion-thank-you-image {
+  display: flex;
+  align-items: right;
+  justify-content: right;
+}
+
+.champion-thank-you-image img {
+  display: block;
+  width: 70%;
+  max-width: 390px;
+  height: auto;
+}
+
+
+/* CONTENT */
+
+.champion-thank-you-content {
+  padding: 20px 15px;
+}
+
+.champion-thank-you-message h1 {
+  margin: 0 0 12px;
+
+  color: #006738;
+
+  font-family: "Century Gothic", sans-serif;
+  font-size: 38px;
   font-weight: 800;
   line-height: 1.15;
 }
 
-
-/* =========================================================
-   LEAD
-   ========================================================= */
-
 .champion-thank-you-lead {
-  margin: 0 0 14px;
+  margin: 0 0 12px;
 
-  color: #006738;
+  color: #393b3c;
 
   font-family: "Montserrat", sans-serif;
   font-size: 18px;
   font-weight: 700;
-  line-height: 1.5;
 }
 
-
-/* =========================================================
-   SUPPORTING COPY
-   ========================================================= */
-
-.champion-thank-you-copy {
-  max-width: 620px;
-  margin: 0 auto;
-
-  color: #5f5f5e;
-
-  font-family: "Montserrat", sans-serif;
-  font-size: 15px;
-  line-height: 1.6;
-}
-
-
-/* =========================================================
-   CONTINUE APPLICATION CTA
-   ========================================================= */
-
-.champion-thank-you-cta {
-  max-width: 620px;
-
-  margin: 35px auto 0;
-  padding: 30px;
-
-  background: #f3f7f1;
-
-  border: 1px solid rgba(0, 103, 56, 0.10);
-  border-radius: 18px;
-
-  box-shadow:
-    0 10px 30px rgba(0, 0, 0, 0.05);
-}
-
-
-.champion-thank-you-cta h2 {
-  margin: 0 0 10px;
-
-  color: #006738;
-
-  font-family: "komet", sans-serif;
-  font-size: 23px;
-  font-weight: 800;
-}
-
-
-.champion-thank-you-cta p {
-  max-width: 520px;
-  margin: 0 auto 22px;
+.champion-thank-you-message > p:last-child {
+  margin: 0;
 
   color: #5f5f5e;
 
@@ -2121,70 +2094,88 @@ text-align: left;
 }
 
 
-/* =========================================================
-   CTA BUTTON
-   ========================================================= */
+/* CTA */
+
+.champion-thank-you-cta {
+  margin-top: 25px;
+  padding: 24px;
+
+  background: #f3f7f1;
+
+  border: 1px solid rgba(0, 103, 56, 0.10);
+  border-radius: 16px;
+}
+
+.champion-thank-you-cta h2 {
+  margin: 0 0 8px;
+
+  color: #006738;
+
+  font-family: "Century Gothic", sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.champion-thank-you-cta p {
+  margin: 0 0 18px;
+
+  color: #5f5f5e;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+
+/* BUTTON */
 
 .champion-thank-you-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
 
-  padding: 14px 28px;
+  padding: 13px 24px;
 
   border: none;
-  border-radius: 10px;
+  border-radius: 24px;
 
-  background: #ef4136;
-  color: #ffffff;
+  background: #ef4036;
+  color: #fff;
 
-  font-family: "Montserrat", sans-serif;
-  font-size: 15px;
+  font-family: "Century Gothic", sans-serif;
+  font-size: 14px;
   font-weight: 700;
+  text-transform: uppercase;
 
   cursor: pointer;
-
-  box-shadow:
-    0 8px 20px rgba(239, 65, 54, 0.18);
-
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease,
-    background-color 0.2s ease;
 }
-
-
-.champion-thank-you-button:hover {
-  background: #d9362f;
-  transform: translateY(-2px);
-
-  box-shadow:
-    0 10px 24px rgba(239, 65, 54, 0.25);
-}
-
-
-/* =========================================================
-   TIME ESTIMATE
-   ========================================================= */
 
 .champion-thank-you-cta small {
   display: block;
+  margin-top: 10px;
 
-  margin-top: 13px;
-
-  color: #6f6f6f;
+  color: #777;
 
   font-family: "Montserrat", sans-serif;
-  font-size: 12px;
+  font-size: 11px;
+}
+
+
+/* TIMELINE */
+
+.champion-thank-you-timeline {
+  width: 50%;
+  max-width: 720px;
+  margin: 0 auto 0;
 }
 
 
 /* =========================================================
-   FULL APPLICATION FORM
+   FORM
    ========================================================= */
 
 .champion-form-container {
-  overflow: hidden;
+  margin-top: 40px !important;
 }
 
 .cta-box h3 {
@@ -3156,45 +3147,91 @@ min-width:100%;
 
   }
 
-   .champion-thank-you {
-    padding: 35px 15px 55px;
+    .champion-thank-you {
+    padding: 25px 18px 50px;
   }
 
-  .champion-thank-you-card {
-    margin-top: 25px;
-    padding: 35px 22px;
-    border-radius: 20px;
+  /* Contacto arriba, pero integrado al flujo */
+  .champion-thank-you-contact {
+    position: static;
+    width: 100%;
+    box-sizing: border-box;
+    align-items: center;
+    text-align: center;
+    padding: 14px 18px;
+    margin-bottom: 20px;
   }
 
-  .champion-thank-you-icon {
-    width: 56px;
-    height: 56px;
-    font-size: 26px;
+  .champion-thank-you-contact span {
+    font-size: 14px;
   }
 
-  .champion-thank-you-card h1 {
-    font-size: 32px;
+  .champion-thank-you-contact a {
+    font-size: 18px;
+  }
+
+  /* Hero pasa a una sola columna */
+  .champion-thank-you-hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+    gap: 10px;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  .champion-thank-you-image {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .champion-thank-you-image img {
+    width: 55%;
+    max-width: 280px;
+  }
+
+  .champion-thank-you-content {
+    padding: 10px 0 0;
+  }
+
+  .champion-thank-you-message h1 {
+    font-size: 30px;
+    margin-bottom: 10px;
   }
 
   .champion-thank-you-lead {
     font-size: 16px;
   }
 
-  .champion-thank-you-copy {
-    font-size: 14px;
+  .champion-thank-you-message > p:last-child {
+    font-size: 13px;
+    line-height: 1.55;
   }
 
+  /* CTA */
   .champion-thank-you-cta {
-    padding: 24px 18px;
-    margin-top: 28px;
+    margin-top: 20px;
+    padding: 20px 18px;
   }
 
   .champion-thank-you-cta h2 {
-    font-size: 20px;
+    font-size: 18px;
+  }
+
+  .champion-thank-you-cta p {
+    font-size: 13px;
   }
 
   .champion-thank-you-button {
     width: 100%;
+    padding: 14px 20px;
+  }
+
+  /* Timeline */
+  .champion-thank-you-timeline {
+    width: 60%;
+    max-width: none;
+    margin: 25px auto 0;
+    font-size: 12px;
   }
 
 }
