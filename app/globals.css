@@ -3830,4 +3830,15 @@ min-width:100%;
   .champion-final-content h2 {
     font-size: 19px;
   }
+
+  .reviews-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    justify-items: center;
+  }
+
+  .review-card {
+    width: 100%;
+  
+  }
 }
