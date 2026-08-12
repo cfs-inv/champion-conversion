@@ -13,36 +13,8 @@ html{
 }
 
 body{
-font-family:"basic-sans",sans-serif;
+font-family: "Montserrat", sans-serif;
 
-background-image:
-linear-gradient(
-rgba(255,255,255,0.65),
-rgba(255,255,255,0.65)
-),
-url("/images/mainbg.webp");
-
-background-size:cover;
-background-position:center;
-background-repeat:no-repeat;
-}
-
-.main-page-bg {
-  width: 100%;
-  min-height: 100vh;
-  margin: 0;
-  padding: 0;
-  background-image: 
-    linear-gradient(
-      rgba(255, 255, 255, 0.65),
-      rgba(255, 255, 255, 0.65)
-    ),
-    url("/images/mainbg.webp");
-  background-size: cover;
-  background-position: top;
-  background-repeat: no-repeat;
-  
-  background-attachment: fixed; 
 }
 
 .fade-in {
@@ -62,6 +34,25 @@ background-repeat:no-repeat;
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.champion-landing {
+  min-height: 100vh;
+
+  background:
+    radial-gradient(
+      circle at 80% 5%,
+      rgba(250, 249, 250, 0.95) 0%,
+      rgba(220, 221, 221, 0) 42%
+    ),
+    radial-gradient(
+      circle at 10% 80%,
+      rgba(250, 249, 250, 0.95) 0%,
+      rgba(220, 221, 221, 0) 50%
+    ),
+    #faf9fa;
+
+  color: #fff;
 }
 
 .mobile-logo{
@@ -122,17 +113,8 @@ margin: 10px 20px 30px 20px;
 }
 
 
-h1{
-  font-family: "komet", sans-serif;
-  font-weight: 800;
-  font-size: 54px;
-  color: #242424;
-  line-height: 1;
-  margin-top: 40px;
-}
-
 p{
-  font-family: "basic-sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
 }
 
@@ -152,14 +134,14 @@ flex-wrap:wrap;
 
 .benefits h2{
   margin-bottom: 20px;
-  font-family: "komet-sc", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-style: normal;
 }
 
 .benefits ul{
   margin-bottom: 20px;
-  font-family: "basic-sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
 }
 
@@ -258,7 +240,7 @@ display:block;
 .nav-links a {
   text-decoration: none;
   color: #393b3c;
-  font-family: "komet-sc", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-style: normal;
   font-size: 18px;
@@ -283,7 +265,7 @@ display:block;
 
 .call-button::after {
 
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 200;
   font-size: 22px;
   content: "🕿";
@@ -354,33 +336,56 @@ display:block;
   gap: 16px;
 }
 
-
 .loan-form {
   flex: 1;
   min-width: 350px;
+
   padding: 32px;
-  border-radius: 24px;
-  background-image: linear-gradient(-45deg,#258e4a,#5fa820);
-  box-shadow: 0 10px 40px rgba(0,0,0,.08);
-  color: #fff;
+
+  border-radius: 20px;
+
+  background-color: #006738;
+
+  box-shadow:
+    0 14px 35px rgba(0, 0, 0, 0.18);
+
+  color: #ffffff;
 
   position: relative;
   overflow: hidden;
-  
 }
 
 .loan-form input[type="text"],
 .loan-form input[type="email"],
 .loan-form select {
-  background-color: #fcfcfc; /* Un blanco roto muy sutil para que contrasten con la tarjeta */
-  border: 1px solid #e4e4e7;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  background-color: #ffffff;
+
+  border: 1px solid rgba(255, 255, 255, 0.5);
+
+  color: #393b3c;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 
 
-.loan-form h2{
-  color: #feffbd;
+.loan-form h2 {
+  color: #ffffff;
+  margin-bottom: 10px;
+
+  font-family: "Century Gothic", "Montserrat", sans-serif;
+  font-weight: 700;
+}
+
+.loan-form label {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 10px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: -4px;
 }
 
 .loan-form h2,
@@ -389,7 +394,7 @@ display:block;
 }
 
 .loan-form p {
-  margin-top: 5px;
+  margin-top: 0;
   padding-bottom: 20px;
   border-bottom: 1px solid rgba(255,255,255,.099);
   font-size: 14px;
@@ -397,34 +402,62 @@ display:block;
 
 .loan-form h3{
   margin: 15px 0;
-  font-family: "basic-sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 800;
   font-style: normal;
   text-align: center;
   text-transform: uppercase;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .loan-form input{
-  font-family: "basic-sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-style: normal;
+  font-size: 15px;
 }
 
 .loan-form select{
-  font-family: "basic-sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-style: normal;
   color: #757587;
+  font-size: 15px;
 }
 
 
 
 .loan-form button {
-  border-radius: 14px; /* El formulario mantiene su botón más cuadrado */
-  font-family: "komet-sc", sans-serif;
+  border-radius: 999px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #ef4036 0%,
+      #d9362f 100%
+    );
+
+  color: #ffffff;
+
+  font-family: "Century Gothic", "Montserrat", sans-serif;
   font-weight: 700;
-  font-style: normal;
+
+  box-shadow:
+    0 5px 14px rgba(239, 64, 55, 0.25);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    filter 0.2s ease;
+}
+
+.loan-form button:hover {
+  transform: translateY(-1px);
+
+  filter: brightness(1.04);
+
+  box-shadow:
+    0 7px 18px rgba(239, 64, 55, 0.32);
 }
 
 .form-step {
@@ -571,16 +604,6 @@ button {
   margin-bottom: 20px;
 }
 
-/* Estilo para las etiquetas de los campos que ahora son visibles */
-.loan-form label {
-  font-family: "basic-sans", sans-serif;
-  font-weight: 700;
-  font-size: 13px;
-  text-transform: uppercase;
-  color: #feffbd; /* Mismo tono amarillo sutil de tus H2 para resaltar la etiqueta */
-  margin-bottom: -4px; /* Acerca la etiqueta a su respectivo input */
-  display: block;
-}
 
 /* Inputs bloqueados pero legibles (Read Only) */
 .loan-form input.input-disabled {
@@ -592,13 +615,15 @@ button {
   font-weight: 600; /* Un poco más grueso para que resalte la info del usuario */
 }
 
-/* Evitamos que el input disabled cambie de color al hacerle foco */
-.loan-form input.input-disabled:focus {
+.loan-form input:focus,
+.loan-form select:focus {
   outline: none;
-  border-color: rgba(255, 255, 255, 0.25);
-  box-shadow: none;
-}
 
+  border-color: #ef4036;
+
+  box-shadow:
+    0 0 0 3px rgba(239, 64, 55, 0.18);
+}
 
 /* Estilos para campos específicos del paso 2 y 3 */
 .currency-input {
@@ -731,88 +756,208 @@ button {
 }
 
 /* ==========================================================================
-   6. Footer y Disclosures (footer.tsx)
+   6. CHAMPION FOOTER & DISCLOSURES
    ========================================================================== */
+
 .footer {
-  margin-top: 30px;
-  padding: 60px 30px;
-  background: #393b3c;
-  color: white;
+  margin-top: 60px;
+  padding: 55px 30px 45px;
+
+  background: linear-gradient(
+    135deg,
+    #006738 0%,
+    #075b39 55%,
+    #0a5138 100%
+  );
+
+  color: #ffffff;
 }
+
 
 .footer-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 50px;
+  gap: 45px;
+
   max-width: 1200px;
-  margin: auto;
+  margin: 0 auto;
 }
+
+
+/* ==========================================================================
+   FOOTER COLUMNS
+   ========================================================================== */
 
 .footer-wide {
   flex: 2;
   min-width: 400px;
 }
 
+
 .footer-col {
   display: flex;
   flex-direction: column;
   gap: 12px;
+
   flex: 1;
+  min-width: 150px;
 }
+
+
+.footer-col h4 {
+  margin: 0 0 8px;
+
+  color: #ffffff;
+
+  font-family: "Century Gothic", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: none;
+}
+
+
+.footer-col p {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.82);
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
 
 .footer-col a {
-  color: #84ce72;
+  color: rgba(255, 255, 255, 0.82);
+
   text-decoration: none;
-  font-family: "basic-sans", sans-serif;
-  font-weight: 800;
-  font-style: normal;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
 }
+
 
 .footer-col a:hover {
-  color: #fff;
+  color: #ffffff;
+  transform: translateX(2px);
 }
+
+
+/* ==========================================================================
+   DISCLOSURE BUTTON
+   ========================================================================== */
 
 .disclosure-btn {
-  padding: 14px;
-  border: none;
-  border-radius: 10px;
-  background: #5fa820;
-  font-weight: 600;
+  display: block;
+  width: 100%;
+
+  padding: 14px 20px;
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 24px;
+
+  background: #ef4136;
+  color: #ffffff;
+
+  font-family: "Century Gothic", "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 800;
+
   cursor: pointer;
-  font-family: "komet-sc", sans-serif;
-  font-weight: 700;
-  font-style: normal;
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
+
+
+.disclosure-btn:hover {
+  background: #d9362d;
+
+  transform: translateY(-1px);
+
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.16);
+}
+
+
+/* ==========================================================================
+   DISCLOSURE PANEL
+   ========================================================================== */
 
 .disclosures {
-  margin-top: 20px;
-  padding: 20px;
-  max-height: 300px;
+  margin-top: 16px;
+  padding: 24px;
+
+  max-height: 320px;
   overflow-y: auto;
-  background: white;
+
+  background: rgba(255, 255, 255, 0.97);
   color: #393b3c;
+
   border-radius: 12px;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  line-height: 1.55;
 }
+
 
 .disclosures p {
-  margin-bottom: 18px;
-  line-height: 1.6;
-  font-family: "basic-sans", sans-serif;
+  margin: 0 0 16px;
+
+  color: #4b4b4b;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
   font-weight: 400;
-  font-style: normal;
+  line-height: 1.6;
 }
+
 
 .disclosures h4 {
-  margin-bottom: 12px;
-  font-family: "komet-sc", sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 18px;
+  margin: 0 0 14px;
+
+  color: #006738;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  line-height: 1.4;
 }
 
-.disclosures li {
-  margin-bottom: 12px;
+
+.disclosures ol {
+  margin: 0 0 20px;
+  padding-left: 22px;
 }
+
+
+.disclosures li {
+  margin-bottom: 10px;
+
+  color: #4b4b4b;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+
+/* Champion accents inside the disclosure */
+
+.disclosure-accent {
+  color: #006738;
+  font-weight: 800;
+}
+
 
 /* Utilitarios sueltos */
 .btn {
@@ -1085,101 +1230,143 @@ text-align: left;
   color: #c68b00;
 }
 
-.steps-section{
-  max-width:1600px;
-  margin:40px auto;
-  padding:0 20px;
-  
+/* =========================================================
+   CHAMPION - HOW IT WORKS
+========================================================= */
+
+.steps-section {
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-.steps-title{
-  text-align:center;
-  margin-bottom:40px;
+.steps-title {
+  margin: 0 0 28px;
+  text-align: left;
 
-  font-family:"komet",sans-serif;
-  font-weight: 800;
-  font-size:38px;
-  color: #242424;
+  font-family: "Century Gothic", sans-serif;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 1.15;
+
+  color: #006738;
 }
 
-.steps-container{
-  display:flex;
-  gap:24px;
-  flex-wrap:wrap;
-
+.steps-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  position: relative;
 }
 
-.step-card{
-  flex:1;
-  min-width:300px;
+/* Línea vertical del proceso */
+.steps-container::before {
+  content: "";
+  position: absolute;
 
-  padding:30px;
-  border-radius:24px;
+  left: 27px;
+  top: 28px;
+  bottom: 28px;
 
-  background-image:linear-gradient(
-    -45deg,
-    #258e4a,
-    #5fa820
-  );
+  width: 2px;
+  background: #dce8e2;
+}
 
-  box-shadow:0 10px 40px rgba(0,0,0,.08);
+/* =========================================================
+   STEP
+========================================================= */
 
-  color:white;
+.step-card {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  column-gap: 18px;
+
+  padding: 0 0 28px;
+  margin: 0;
+
+  background: transparent;
+  box-shadow: none;
+  border-radius: 0;
+
+  color: #232323;
+
+  transition: transform 0.25s ease;
+}
+
+.step-card:last-child {
+  padding-bottom: 0;
+}
+
+.step-card:hover {
+  transform: translateX(4px);
+}
+
+/* =========================================================
+   NUMBER
+========================================================= */
+
+.step-number {
+  position: relative;
+  z-index: 2;
+
+  width: 56px;
+  height: 56px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0;
+
+  border-radius: 50%;
+
+  background: #006738;
+  color: #ffffff;
+
+  border: 4px solid #ffffff;
+
+  font-family: "Century Gothic", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
 
   transition:
-    transform .3s ease,
-    box-shadow .3s ease;
-
-  position:relative;
-
-  overflow:hidden;
+    background-color 0.25s ease,
+    transform 0.25s ease;
 }
 
-.step-card:hover{
-  transform:translateY(-8px);
+.step-card:hover .step-number {
+  background: #ef4136;
+  transform: scale(1.06);
 }
 
-.step-number{
-  width:55px;
-  height:55px;
+/* =========================================================
+   CONTENT
+========================================================= */
 
-  display:flex;
-  align-items:center;
-  justify-content:center;
+.step-card h3 {
+  margin: 4px 0 7px;
 
-  border-radius:50%;
+  font-family: "Century Gothic", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.25;
 
-  background:rgba(255,255,255,.15);
-
-  font-size:24px;
-  font-weight:800;
-
-  margin:0 auto 20px auto;
-
-
-   transition: all 0.3s ease;
-
+  color: #006738;
+  text-align: left;
 }
 
-.step-card:hover .step-number{
-  background-color:#89c541;
-  transform:scale(1.12);
+.step-card p {
+  margin: 0;
 
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.55;
 
-}
-
-.step-card h3{
-  margin-bottom:14px;
-
-  font-family:"komet-sc",sans-serif;
-  font-size:20px;
-  text-align: center;
-}
-
-.step-card p{
-  font-size:14px;
-  line-height:1.6;
-  text-align: center;
+  color: #4a4a4a;
+  text-align: left;
 }
 
 .keep-driving{
@@ -1339,111 +1526,147 @@ text-align: left;
   display:none;
 }
 
-/* =========================
-   FAQ WRAPPER
-========================= */
+/* =========================================================
+   CHAMPION FAQ
+========================================================= */
 
 .faq-wrapper {
   width: 100%;
   max-width: 680px;
   margin: 0 auto;
+
   display: flex;
   flex-direction: column;
-  gap: 14px;
-  padding: 20px 0;
-  
+  gap: 12px;
+
+  padding: 5px 0;
 }
 
-/* =========================
+
+/* =========================================================
    FAQ ITEM
-========================= */
+========================================================= */
 
 .faq-item {
+  background: #006738;
+  border: 1px solid #006738;
 
   border-radius: 10px;
-  overflow: hidden;
-  background: #393b3c;
 
-  backdrop-filter: blur(8px);
+  box-shadow:
+    0 4px 14px rgba(0, 103, 56, 0.12);
+
+  overflow: hidden;
 
   transition:
-    transform 0.3s ease,
-    background-color 0.3s ease;
-  
-  
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
 }
 
 .faq-item:hover {
+  transform: translateY(-1px);
 
-  transform: translateY(-2px);
+  background: #087344;
+
+  box-shadow:
+    0 6px 18px rgba(0, 103, 56, 0.16);
 }
+
+
+/* =========================================================
+   ACTIVE ITEM
+========================================================= */
 
 .faq-item.active {
-  background-color: #5fa820;
-  
+  background: #ffffff;
+  border-color: #ef4036;
 
+  box-shadow:
+    0 5px 18px rgba(239, 64, 54, 0.12);
 }
 
-/* =========================
-   QUESTION BUTTON
-========================= */
+
+/* =========================================================
+   QUESTION
+========================================================= */
 
 .faq-question {
   width: 100%;
-  border: none;
-  background: transparent;
-  
 
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  padding: 10px 36px;
+  padding: 17px 20px;
+
+  border: none;
+  background: transparent;
 
   cursor: pointer;
-
   text-align: left;
 
-  color: #fff;
-  font-family: "komet-sc", sans-serif;
-  font-size: 18px;
-  font-weight: 800;
-  line-height: 1;
+  color: #ffffff;
 
-  transition: background-color 0.25s ease;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1.4;
+
+  text-transform: none;
+
+  transition:
+    color 0.2s ease,
+    background-color 0.2s ease;
 }
 
-.faq-question:hover {
-  background: rgba(255, 255, 255, 0.02);
+
+.faq-item.active .faq-question {
+  color: #ef4036;
 }
 
-/* =========================
+
+/* =========================================================
    ICON
-========================= */
+========================================================= */
 
 .faq-icon {
-  font-size: 28px;
-  font-weight: 300;
-  color: #fff;
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 28px;
+  height: 28px;
+
+  margin-left: 20px;
+
+  color: #ffffff;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1;
 
   transition:
     transform 0.3s ease,
-    opacity 0.2s ease;
-
-  flex-shrink: 0;
-  margin-left: 20px;
+    color 0.2s ease;
 }
 
 .faq-item.active .faq-icon {
+  color: #ef4036;
   transform: rotate(45deg);
 }
 
-/* =========================
-   ANSWER ANIMATION
-========================= */
+
+/* =========================================================
+   ANSWER
+========================================================= */
 
 .faq-answer {
   max-height: 0;
+
   overflow: hidden;
   opacity: 0;
 
@@ -1453,52 +1676,76 @@ text-align: left;
 }
 
 .faq-item.active .faq-answer {
-  max-height: 350px; 
+  max-height: 350px;
   opacity: 1;
 }
 
 .faq-answer p {
-  overflow: hidden;
-
   margin: 0;
-  padding: 0 36px 24px;
 
-  color: #fff;
+  padding: 0 20px 20px;
 
-  font-size: 16px;
-  line-height: 1;
+  color: #5f5f5e;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
   font-weight: 400;
+  line-height: 1.6;
 }
+
+/* =========================================================
+   FAQ TABS
+   ========================================================= */
 
 .tabs {
   display: flex;
   gap: 10px;
+
   justify-content: center;
-  margin-bottom: 20px;
+
   width: 78%;
-  margin-left: auto;
-  margin-right: auto;
+
+  margin: 0 auto 20px;
 }
 
 .pill {
   padding: 8px 16px;
+
+  border: 1px solid #dedede;
   border-radius: 999px;
-  border: 1px solid rgba(255,255,255,0.2);
-  background: #393b3c;
-  color: white;
+
+  background: #ffffff;
+
+  color: #5f5f5e;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+
   cursor: pointer;
-  transition: all 0.2s ease;
+
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
 }
 
 .pill:hover {
   transform: translateY(-1px);
+
+  border-color: #ef4036;
 }
 
 .pill.active {
-  background: #5fa820;
-  border-color: #5fa820;
+  background: #ef4036;
+
+  border-color: #ef4036;
+
+  color: #ffffff;
 }
 
+  
 .partners-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -1725,41 +1972,219 @@ text-align: left;
 }
 
 
-.thank-you-page {
+/* =========================================================
+   CHAMPION THANK YOU PAGE
+   ========================================================= */
+
+.champion-thank-you {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 40px 20px 20px 20px;
+  padding: 50px 20px 70px;
+  color: #232323;
 }
 
-.thank-you-card {
-  max-width: 700px;
-  margin: 0 auto;
+
+/* =========================================================
+   MAIN CARD
+   ========================================================= */
+
+.champion-thank-you-card {
+  max-width: 760px;
+  margin: 35px auto 0;
+  padding: 45px 50px;
   text-align: center;
-  background: transparent;
+
+  background: #ffffff;
   border-radius: 24px;
-  padding: 0 50px;
-  
+
+  box-shadow:
+    0 12px 40px rgba(0, 0, 0, 0.07);
 }
 
 
-.thank-you-card h1 {
-  margin-bottom: 16px;
+/* =========================================================
+   SUCCESS ICON
+   ========================================================= */
+
+.champion-thank-you-icon {
+  width: 64px;
+  height: 64px;
+
+  margin: 0 auto 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #006738;
+  color: #ffffff;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+
+  box-shadow:
+    0 8px 22px rgba(0, 103, 56, 0.18);
 }
 
-.lead {
-  font-size: 1.15rem;
-  font-weight: 600;
-  margin-bottom: 16px;
+
+/* =========================================================
+   HEADLINE
+   ========================================================= */
+
+.champion-thank-you-card h1 {
+  margin: 0 0 14px;
+
+  color: #232323;
+
+  font-family: "komet", sans-serif;
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 1.15;
 }
 
-.cta-box {
-  margin-top: 32px;
-  margin-bottom: 32px;
-  padding: 28px;
+
+/* =========================================================
+   LEAD
+   ========================================================= */
+
+.champion-thank-you-lead {
+  margin: 0 0 14px;
+
+  color: #006738;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   SUPPORTING COPY
+   ========================================================= */
+
+.champion-thank-you-copy {
+  max-width: 620px;
+  margin: 0 auto;
+
+  color: #5f5f5e;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   CONTINUE APPLICATION CTA
+   ========================================================= */
+
+.champion-thank-you-cta {
+  max-width: 620px;
+
+  margin: 35px auto 0;
+  padding: 30px;
+
+  background: #f3f7f1;
+
+  border: 1px solid rgba(0, 103, 56, 0.10);
   border-radius: 18px;
-  background: #e4ecdc;
-  border: 1px solid #e4efe7;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+
+.champion-thank-you-cta h2 {
+  margin: 0 0 10px;
+
+  color: #006738;
+
+  font-family: "komet", sans-serif;
+  font-size: 23px;
+  font-weight: 800;
+}
+
+
+.champion-thank-you-cta p {
+  max-width: 520px;
+  margin: 0 auto 22px;
+
+  color: #5f5f5e;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+
+/* =========================================================
+   CTA BUTTON
+   ========================================================= */
+
+.champion-thank-you-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 14px 28px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: #ef4136;
+  color: #ffffff;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 8px 20px rgba(239, 65, 54, 0.18);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+
+
+.champion-thank-you-button:hover {
+  background: #d9362f;
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 24px rgba(239, 65, 54, 0.25);
+}
+
+
+/* =========================================================
+   TIME ESTIMATE
+   ========================================================= */
+
+.champion-thank-you-cta small {
+  display: block;
+
+  margin-top: 13px;
+
+  color: #6f6f6f;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+}
+
+
+/* =========================================================
+   FULL APPLICATION FORM
+   ========================================================= */
+
+.champion-form-container {
+  overflow: hidden;
 }
 
 .cta-box h3 {
@@ -2048,6 +2473,292 @@ text-align: left;
   background-color: #34A853;
 }
 
+/* =========================================================
+   CHAMPION CONVERSION LANDING
+   ========================================================= */
+
+.champion-landing {
+  width: 100%;
+}
+
+.champion-container {
+  width: min(1200px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.champion-hero {
+  width: 100%;
+  padding: 25px 0 35px;
+}
+
+.champion-headline {
+  width: 100%;
+  margin: 10px 0 10px 0;
+  text-align: center;
+
+  font-family: "Century Gothic", "Montserrat", sans-serif;
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 700;
+  line-height: 1.2;
+
+  color: #006738;
+}
+
+.champion-headline-accent {
+  display: inline-block;
+
+  padding: 0 8px;
+  border-radius: 4px;
+
+  background-color: #ef4036;
+  color: #ffffff;
+}
+
+.champion-subheading {
+  max-width: 750px;
+  margin: 20px auto 30px auto;
+
+  text-align: center;
+  color: #232323;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+
+/* =========================================================
+   IMAGE + FORM
+   ========================================================= */
+
+.champion-conversion-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+
+  align-items: center;
+
+  width: 100%;
+}
+
+.champion-image-column {
+  width: 100%;
+}
+
+.champion-hero-image {
+  display: block;
+
+  width: 100%;
+  height: auto;
+
+  object-fit: contain;
+}
+
+.champion-form-column {
+  width: 100%;
+}
+
+
+/* =========================================================
+   HIGHLIGHTS
+   ========================================================= */
+
+.champion-highlights {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  width: 100%;
+  margin: 20px 0 35px;
+}
+
+.champion-highlight {
+  padding: 14px 10px;
+  text-align: center;
+}
+
+.champion-highlight-inner {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 8px;
+}
+
+.champion-check {
+  flex-shrink: 0;
+  color: #ef4036;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.champion-highlight-text {
+  color: #393b3c;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  line-height: 1.35;
+  font-weight: 500;
+}
+
+.champion-highlight-text:hover {
+  color: #ef4136;
+}
+
+
+
+.champion-logo {
+  width: 220px;
+  height: auto;
+  object-fit: contain;
+}
+
+.champion-heading-divider {
+  width: 1px;
+  height: 58px;
+  background: rgba(34, 91, 58, 0.25);
+}
+
+.champion-brand-heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  width: fit-content;
+  max-width: 100%;
+  margin: 10px auto 0;
+}
+
+.champion-headline {
+  margin: 0;
+  text-align: left;
+}
+
+.champion-image-copy {
+  text-align: center;
+  color: #393b3c;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.35;
+  width: 450px;
+  margin: 0 auto;
+}
+
+/* =========================================================
+   STEPS + FAQ
+   ========================================================= */
+
+.champion-information {
+  width: 100%;
+  padding: 55px 0 70px;
+}
+
+.champion-information-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 60px;
+  align-items: start;
+  width: 100%;
+}
+
+.champion-steps-column,
+.champion-faq-column {
+  width: 100%;
+  min-width: 0;
+  max-width: none;
+}
+
+.step-card > h3,
+.step-card > p {
+  grid-column: 2;
+}
+
+.champion-section-title {
+  margin: 0 0 25px;
+
+  font-family: "Century Gothic", "Montserrat", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+
+  color: #006738;
+}
+
+/* =========================================================
+   CHAMPION LOCAL / CALIFORNIA SECTION
+========================================================= */
+
+.champion-local-section {
+  padding: 40px 20px;
+  background: transparent;
+}
+
+.champion-local-banner {
+  max-width: 1100px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 480px 1fr;
+  gap: 45px;
+  align-items: center;
+
+  padding: 35px 45px;
+
+  background: transparent;
+  border-radius: 24px;
+}
+
+.champion-local-image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.champion-local-image img {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  display: block;
+}
+
+.champion-local-content {
+  text-align: left;
+}
+
+.champion-local-content .champion-section-title {
+  margin-top: 0;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.champion-local-paragraph {
+  margin: 0 0 18px;
+
+  color: #5f5f5e;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.champion-local-disclaimer {
+  margin: 0;
+  padding-top: 14px;
+
+  border-top: 1px solid rgba(0, 103, 56, 0.15);
+
+  color: #6b6b6b;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+
+
+
 
 @media(max-width:768px){
 
@@ -2180,8 +2891,23 @@ min-width:100%;
   margin:40px auto;
   }
 
-  .steps-container{
-    flex-direction:column;
+   .steps-title {
+    font-size: 28px;
+  }
+
+  .step-card {
+    grid-template-columns: 48px 1fr;
+    column-gap: 14px;
+  }
+
+  .step-number {
+    width: 48px;
+    height: 48px;
+    font-size: 18px;
+  }
+
+  .steps-container::before {
+    left: 23px;
   }
 
   .keep-driving{
@@ -2257,6 +2983,218 @@ min-width:100%;
 
    .review-grid {
     grid-template-columns: 1fr;
+  }
+
+  .champion-container {
+    width: min(100% - 30px, 600px);
+  }
+
+  .champion-hero {
+    padding-top: 15px;
+  }
+
+  .champion-headline {
+    font-size: 32px;
+  }
+
+  .champion-subheading {
+    font-size: 16px;
+  }
+
+  .champion-conversion-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .champion-image-column {
+    order: 1;
+  }
+
+  .champion-form-column {
+    order: 2;
+  }
+
+ .champion-highlights {
+  grid-template-columns: 1fr;
+  gap: 8px;
+  margin: 30px auto;
+}
+
+.champion-highlight-inner {
+  justify-content: center;
+  text-align: center;
+}
+
+  .champion-information {
+    padding-top: 40px;
+  }
+
+  .champion-information-grid {
+    grid-template-columns: 1fr;
+    gap: 45px;
+  }
+
+  .champion-section-title {
+    font-size: 25px;
+  }
+
+   .champion-brand-heading {
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .champion-heading-divider {
+    width: 60px;
+    height: 1px;
+  }
+
+  .champion-headline {
+    text-align: center;
+  }
+
+  .champion-logo {
+    width: 190px;
+  }
+
+  .faq-wrapper {
+    gap: 10px;
+  }
+
+  .faq-question {
+    padding: 16px;
+
+    font-size: 15px;
+  }
+
+  .faq-icon {
+    width: 24px;
+    height: 24px;
+
+    margin-left: 12px;
+
+    font-size: 22px;
+  }
+
+  .faq-answer p {
+    padding: 0 16px 18px;
+
+    font-size: 14px;
+    line-height: 1.55;
+  }
+
+  .tabs {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .footer {
+    padding: 45px 20px 35px;
+  }
+
+  .footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 25px 15px;
+}
+
+.footer-wide {
+  flex: 0 0 100%;
+  min-width: 0;
+}
+
+.footer-col {
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+  .disclosures {
+    max-height: 360px;
+    padding: 20px;
+  }
+
+  .champion-local-banner {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 25px 20px;
+  }
+
+  .champion-local-image img {
+    width: 100%;
+    max-width: 620px;
+  }
+
+  .champion-local-content {
+    text-align: center;
+  }
+
+  .champion-local-content .champion-section-title {
+    text-align: center;
+  }
+
+  .champion-local-disclaimer {
+    text-align: left;
+  }
+
+  .champion-image-copy {
+  margin: 20px auto 40px auto;
+}
+
+.champion-steps-column,
+.champion-faq-column {
+  margin: 0 auto 20px auto;
+}
+
+.champion-local-section {
+  padding: 30px 20px 20px 20px;
+  background: transparent;
+  margin: 0 auto;
+}
+
+.champion-hero-image {
+  width: 80%;
+  margin: 0 auto;
+
+  }
+
+   .champion-thank-you {
+    padding: 35px 15px 55px;
+  }
+
+  .champion-thank-you-card {
+    margin-top: 25px;
+    padding: 35px 22px;
+    border-radius: 20px;
+  }
+
+  .champion-thank-you-icon {
+    width: 56px;
+    height: 56px;
+    font-size: 26px;
+  }
+
+  .champion-thank-you-card h1 {
+    font-size: 32px;
+  }
+
+  .champion-thank-you-lead {
+    font-size: 16px;
+  }
+
+  .champion-thank-you-copy {
+    font-size: 14px;
+  }
+
+  .champion-thank-you-cta {
+    padding: 24px 18px;
+    margin-top: 28px;
+  }
+
+  .champion-thank-you-cta h2 {
+    font-size: 20px;
+  }
+
+  .champion-thank-you-button {
+    width: 100%;
   }
 
 }

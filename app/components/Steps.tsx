@@ -10,31 +10,31 @@ type StepsProps = {
 
 const stepsContent: Record<"en" | "es", { title: string; steps: Step[] }> = {
   en: {
-    title: "Get Funded in 4 Simple Steps",
+    title: "",
     steps: [
       {
         number: "1",
-        title: "Apply Online or Call",
+        title: "Start Your Application",
         description:
           "Complete a quick application with a few details about you and your vehicle, or give us a call to get started.",
       },
       {
         number: "2",
-        title: "Submit Documents",
+        title: "Provide Your Documents",
         description:
-          "Send a few basic documents like your ID, proof of ownership, and insurance. We'll help every step of the way.",
+          "Send us the documents needed to review your application, such as your ID, vehicle title, and proof of insurance.",
       },
       {
         number: "3",
-        title: "Review & Sign",
+        title: "Review Your Options",
         description:
-          "We review your information quickly and carefully, then send everything over for signature.",
+          "We'll review your information and, if you're approved, walk you through the available loan terms before you sign.",
       },
       {
         number: "4",
-        title: "Receive Funds",
+        title: "Get Your Funds",
         description:
-          "Once approved, receive your funds using one of our available payment options.",
+          "Once everything is finalized, your funds will be delivered through one of our available payment options.",
       },
     ],
   },

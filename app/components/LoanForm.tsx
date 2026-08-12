@@ -23,7 +23,7 @@ export default function LoanForm({
   const searchParams = useSearchParams();
 
   const partner = searchParams.get("partner") ?? attribution?.partner ?? "";
-  const brand = attribution?.brand ?? "Cash Loans Experts";
+  const brand = attribution?.brand ?? "Champion";
   const location = searchParams.get("location") ?? attribution?.location ?? "";
   const trafficSource = searchParams.get("traffic_source") ?? attribution?.trafficSource ?? "";
   const mainSource = attribution?.mainSource ?? "";
@@ -139,9 +139,8 @@ export default function LoanForm({
 
       {/* STEP 1 */}
       <div className={`form-step ${step === 1 ? "active" : ""}`}>
-        <h2>Start your application today</h2>
-        <p>And you could get approved for up to $50K*</p>
-        <h3>Contact Information</h3>
+        <h2>Contact Information</h2>
+        <p>Drop your info below, it only takes a few minutes.</p>
 
         <input name="Name_First" placeholder="First name" />
         <input name="Name_Last" placeholder="Last name" />

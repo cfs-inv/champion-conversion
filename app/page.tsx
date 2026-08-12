@@ -1,69 +1,251 @@
+
+import Footer from "@/app/components/Footer";
+import LoanForm from "@/app/components/LoanForm";
+import Steps from "@/app/components/Steps";
+import FAQAccordion from "@/app/components/FAQAccordion";
+import { cities } from "@/app/data/cityData";
 import Image from "next/image";
-import styles from "./page.module.css";
+import { Metadata } from "next";
+import { Suspense } from "react";
+
+const cityData = cities.california;
+
+export const metadata: Metadata = {
+  title: "Car Title Loans in California | Champion Cash Loans",
+  description:
+    "Apply online for a car title loan in California. Get started online and keep driving your vehicle while making your payments.",
+};
 
 export default function Home() {
+  const localFAQs = cityData.faqs;
+
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
+    <>
+      <main className="champion-landing">
+
+        {/* =========================================================
+            HERO / HEADLINE
+        ========================================================= */}
+
+        <section className="champion-hero">
+          <div className="champion-container">
+
+           <div className="champion-brand-heading">
+  <Image
+    src="/images/championlogo_web.webp"
+    alt="Champion Cash Loans"
+    width={220}
+    height={60}
+    priority
+    className="champion-logo"
+  />
+
+  <span className="champion-heading-divider" aria-hidden="true" />
+
+  <h1 className="champion-headline">
+    Car Title Loans{" "}
+    <span className="champion-headline-accent">
+      Made Simple.
+    </span>
+  </h1>
+</div>
+
+
+
+  {/* =====================================================
+                BENEFITS
+            ===================================================== */}
+
+            <div className="champion-highlights">
+
+              {cityData.localBenefits.map((benefit, index) => (
+                <div
+                  className="champion-highlight"
+                  key={index}
+                >
+                  <div className="champion-highlight-inner">
+
+                    <span className="champion-check">
+                      ✓
+                    </span>
+
+                    <span className="champion-highlight-text">
+                      {benefit}
+                    </span>
+
+                  </div>
+                </div>
+              ))}
+
+            </div>
+
+            {/* =====================================================
+                IMAGE + FORM
+            ===================================================== */}
+
+            <div className="champion-conversion-grid">
+
+              <div className="champion-image-column">
+
+
+
+  <Image
+    src={cityData.heroImage}
+    alt="Car title loans in California"
+    width={700}
+    height={500}
+    sizes="(max-width: 768px) 100vw, 50vw"
+    className="champion-hero-image"
+    priority
+  />
+
+  <div className="champion-image-copy">
+    <h2>Get started today.</h2>
+    <p>
+      Complete your application online and see what options may be available.
+    </p>
+   <p className="disclaimer">
+     *Same-day funding is subject to availability and may vary based on application review and bank processing.
+   </p>
+  </div>
+
+</div>
+
+              <div className="champion-form-column">
+                <Suspense fallback={<div className="loan-form-loading" />}>
+  <LoanForm
+    slug="california"
+    attribution={{
+      mainSource: "Google Ads",
+      trafficSource: "landing-california",
+    }}
+  />
+</Suspense>
+              </div>
+
+            </div>
+
+          
+
+          </div>
+        </section>
+
+
+ {/* =========================================================
+    CALIFORNIA LOCAL BANNER / SEO
+========================================================= */}
+
+<section className="champion-local-section">
+  <div className="champion-container">
+
+    <div className="champion-local-banner">
+
+      {/* VISUAL */}
+      <div className="champion-local-image">
         <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
+          src={cityData.cityBadgeImage}
+          alt={`${cityData.cityName} Champion Cash Loans`}
+          width={300}
+          height={180}
         />
-        <div className={styles.intro}>
-          <h1>
-            To get started, edit the{" "}
-            <code className={styles.code}>page.tsx</code> file.
-          </h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+      </div>
+
+      {/* CONTENT */}
+      <div className="champion-local-content">
+
+        <h2 className="champion-section-title">
+          {cityData.seoHeading}
+        </h2>
+
+        <p className="champion-local-paragraph">
+          {cityData.localSEOParagraph}
+        </p>
+
+        <p className="champion-local-disclaimer">
+          {cityData.regulationsText}
+        </p>
+
+      </div>
+
     </div>
+
+  </div>
+</section>
+
+
+        {/* =========================================================
+            STEPS + FAQ
+        ========================================================= */}
+
+        <section className="champion-information">
+
+          <div className="champion-container">
+
+            <div className="champion-information-grid">
+
+              {/* =========================
+                  HOW IT WORKS
+              ========================= */}
+
+              <div className="champion-steps-column">
+
+                <h2 className="champion-section-title">
+                  How It Works
+                </h2>
+
+                <Steps lang="en" />
+
+              </div>
+
+
+              {/* =========================
+                  FAQ
+              ========================= */}
+
+              <div className="champion-faq-column">
+
+                <h2 className="champion-section-title">
+                  {cityData.faqTitle}
+                </h2>
+
+                <FAQAccordion
+                  items={localFAQs}
+                />
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </section>
+
+
+        {/* =========================================================
+            FAQ STRUCTURED DATA
+        ========================================================= */}
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: localFAQs.map((faq) => ({
+                "@type": "Question",
+                name: faq.question,
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: faq.answer,
+                },
+              })),
+            }),
+          }}
+        />
+
+      </main>
+
+      <Footer />
+    </>
   );
 }

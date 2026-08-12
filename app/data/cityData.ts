@@ -63,25 +63,25 @@ your scheduled payments.`,
     subheading:
       "Apply online today and keep driving your car while making your payments.",
 
-    heroImage: "/images/california-landing.webp",
-    cityBadgeImage: "/images/california-badge.webp",
+    heroImage: "/images/championCA_en.webp",
+    cityBadgeImage: "/images/badgeCA.webp",
 
-    seoHeading: "Why California Drivers Choose Champion",
+    seoHeading: "Here for California Drivers Since 2010",
 
     localSEOParagraph:
-      "California residents can complete their application online without visiting a physical location. If approved, you can keep driving your vehicle while making your scheduled payments.",
+      "We've been helping California drivers find flexible borrowing options for more than a decade. Apply online, keep driving your vehicle, and get support throughout the process.",
 
     localBenefits: [
-      "✔ Get up to 80% of your car's value in cash.",
-      "✔ Apply online from anywhere in California.",
-      "✔ Options designed for California residents.",
-      "✔ Keep driving your car while making your payments.",
+      "Get up to 80% of your car's value in cash.",
+      "Options designed for California residents.",
+      "Keep driving your car while making your payments.",
+      "Same-day funding options may be available*.",
     ],
 
     regulationsText:
       "Loan approval, loan amounts, rates, and terms are subject to underwriting and applicable California law. Actual APR, payment amount, and repayment terms vary by applicant.",
 
-    faqTitle: "Frequently Asked Questions in California",
+    faqTitle: "We keep things simple from start to finish",
 
     faqs: [
       {
@@ -125,10 +125,10 @@ your scheduled payments.`,
       "No importa si vives en Los Ángeles, San Diego, San José, Sacramento, Fresno o cualquier otra ciudad de California. Puedes completar tu solicitud completamente en línea, sin necesidad de visitar una sucursal.",
 
     localBenefits: [
-      "✔ Obtén hasta el 80% del valor de tu carro en efectivo.",
-      "✔ Solicita en línea desde cualquier lugar de California.",
-      "✔ Opciones diseñadas para residentes de California.",
-      "✔ Sigue manejando tu carro mientras realizas tus pagos.",
+      "Obtén hasta el 80% del valor de tu carro en efectivo.",
+      "Solicita en línea desde cualquier lugar de California.",
+      "Opciones diseñadas para residentes de California.",
+      "Sigue manejando tu carro mientras realizas tus pagos.",
     ],
 
     regulationsText:
