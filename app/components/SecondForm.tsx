@@ -17,6 +17,9 @@ export default function LoanFormStep2() {
     phone: "",
     email: "",
     state: "",
+    mainSource: "",
+    trafficSource: "",
+    brand: "",
   });
 
   const [amount, setAmount] = useState("");
@@ -44,18 +47,32 @@ export default function LoanFormStep2() {
 
   // SOLUCIÓN: Función centralizada para cargar datos frescos de localStorage
   const loadFreshLocalStorageData = () => {
-    const uuid = localStorage.getItem("lead_uuid") ?? "";
-    const firstName = localStorage.getItem("first_name") ?? "";
-    const rawLastName = localStorage.getItem("last_name") ?? "";
-    const lastName = rawLastName.replace(/[^a-zA-ZáéíóúÁÉÍÓÚñÑ]/g, "").trim();
-    const phone = localStorage.getItem("phone") ?? "";
-    const email = localStorage.getItem("email") ?? "";
-    const state = localStorage.getItem("state") ?? "";
+  const uuid = localStorage.getItem("lead_uuid") ?? "";
+  const firstName = localStorage.getItem("first_name") ?? "";
+  const rawLastName = localStorage.getItem("last_name") ?? "";
+  const lastName = rawLastName.replace(/[^a-zA-ZáéíóúÁÉÍÓÚñÑ]/g, "").trim();
+  const phone = localStorage.getItem("phone") ?? "";
+  const email = localStorage.getItem("email") ?? "";
+  const state = localStorage.getItem("state") ?? "";
+  const mainSource = localStorage.getItem("main_source") ?? "";
+  const trafficSource = localStorage.getItem("traffic_source") ?? "";
+  const brand = localStorage.getItem("brand") ?? "";
 
-    setLeadUUID(uuid);
-    setStoredData({ firstName, lastName, phone, email, state });
-    setLoading(false);
-  };
+  setLeadUUID(uuid);
+
+  setStoredData({
+    firstName,
+    lastName,
+    phone,
+    email,
+    state,
+    mainSource,
+    trafficSource,
+    brand,
+  });
+
+  setLoading(false);
+};
 
   useEffect(() => {
     // 1. Carga inicial al montar el componente

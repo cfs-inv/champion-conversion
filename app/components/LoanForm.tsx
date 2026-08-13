@@ -168,6 +168,9 @@ const t = translations[lang];
     localStorage.setItem("phone", phone);
     localStorage.setItem("email", email);
     localStorage.setItem("state", state);
+    localStorage.setItem("main_source", mainSource);
+    localStorage.setItem("traffic_source", trafficSource);
+    localStorage.setItem("brand", brand);
 
     setError("");
 
