@@ -10,7 +10,7 @@ export const cities = {
       "Apply online today and keep driving your car while making your payments.",
 
     heroImage: "/images/championCA_en.webp",
-    cityBadgeImage: "/images/badgeCA.webp",
+    cityBadgeImage: "/images/championCA.webp",
 
     seoHeading: "Here to Serve Drivers Since 2010",
 
