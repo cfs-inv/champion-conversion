@@ -258,7 +258,7 @@ localSEOParagraph:
   "Desde 2010, hemos ayudado a conductores de California a encontrar opciones de financiamiento flexibles. Puedes aplicar en línea, seguir manejando tu carro y contar con nuestro apoyo durante todo el proceso.",
 
   localBenefits: [
-    "Obtén hasta el 80% del valor de tu carro en efectivo.",
+    "Obtén hasta el 70% del valor de tu carro en efectivo.",
     "Solicita en línea desde cualquier lugar de California.",
     "Opciones diseñadas para residentes de California.",
     "Sigue manejando tu carro mientras realizas tus pagos.",
