@@ -5,10 +5,12 @@ import { useSearchParams } from "next/navigation";
 
 export default function LoanForm({
   slug,
-  attribution
-}:{
+  attribution,
+  lang = "en",
+}: {
   slug?: string;
-  attribution?:{
+  lang?: "en" | "es";
+  attribution?: {
     partner?: string;
     brand?: string;
     location?: string;
@@ -17,8 +19,74 @@ export default function LoanForm({
     utmCampaign?: string;
     utmSource?: string;
     utmMedium?: string;
-  }
+  };
 }) {
+
+  const translations = {
+  en: {
+    contactTitle: "Contact Information",
+    contactDescription: "Drop your info below, it only takes a few minutes.",
+    firstName: "First name",
+    lastName: "Last name",
+    email: "Email",
+    phone: "Phone number",
+    selectState: "Select state",
+    zipCode: "Zip Code",
+    continue: "Continue →",
+
+    vehicleTitle: "Vehicle Information",
+    year: "Year",
+    make: "Make",
+    model: "Model",
+    mileage: "Mileage",
+    trim: "Trim (optional)",
+    paidOff: "Vehicle Paid Off?",
+    yes: "Yes",
+    no: "No",
+
+    terms: "I accept the Terms and Conditions",
+    back: "← Back",
+    submit: "Get My Cash",
+
+    contactError: "Please complete all required contact fields.",
+    vehicleError:
+      "Please complete vehicle information and accept the terms.",
+  },
+
+  es: {
+    contactTitle: "Información de Contacto",
+    contactDescription:
+      "Ingresa tu información a continuación. Solo te tomará unos minutos.",
+    firstName: "Nombre",
+    lastName: "Apellido",
+    email: "Correo electrónico",
+    phone: "Número de teléfono",
+    selectState: "Selecciona tu estado",
+    zipCode: "Código postal",
+    continue: "Continuar →",
+
+    vehicleTitle: "Información del Vehículo",
+    year: "Año",
+    make: "Marca",
+    model: "Modelo",
+    mileage: "Millaje",
+    trim: "Versión (opcional)",
+    paidOff: "¿Tu vehículo está pagado?",
+    yes: "Sí",
+    no: "No",
+
+    terms: "Acepto los Términos y Condiciones",
+    back: "← Volver",
+    submit: "Mandar Solicitud",
+
+    contactError:
+      "Por favor completa todos los campos de contacto requeridos.",
+    vehicleError:
+      "Por favor completa la información del vehículo y acepta los términos.",
+  },
+};
+
+const t = translations[lang];
 
   const searchParams = useSearchParams();
 
@@ -139,17 +207,17 @@ export default function LoanForm({
 
       {/* STEP 1 */}
       <div className={`form-step ${step === 1 ? "active" : ""}`}>
-        <h2>Contact Information</h2>
-        <p>Drop your info below, it only takes a few minutes.</p>
+        <h2>{t.contactTitle}</h2>
+<p>{t.contactDescription}</p>
 
-        <input name="Name_First" placeholder="First name" />
-        <input name="Name_Last" placeholder="Last name" />
-        <input name="Email" placeholder="Email" type="email" />
-        <input name="PhoneNumber_countrycode" placeholder="Phone number" />
+<input name="Name_First" placeholder={t.firstName} />
+        <input name="Name_Last" placeholder={t.lastName} />
+        <input name="Email" placeholder={t.email} type="email" />
+        <input name="PhoneNumber_countrycode" placeholder={t.phone} />
 
         <select name="Dropdown" 
           aria-label="Select State">
-          <option value="">Select state</option>
+          <option value="">{t.selectState}</option>
           <option value="AK">AK</option>
           <option value="AZ">AZ</option>
           <option value="AR">AR</option>
@@ -201,43 +269,43 @@ export default function LoanForm({
           <option value="WY">WY</option>
         </select>
 
-        <input name="Number" type="text" placeholder="Zip Code" />
+        <input name="Number" type="text" placeholder={t.zipCode} />
 
-        {error && <p className="form-error">{error}</p>}
+        {error && <p className="form-error">{t.contactError}</p>}
 
         <button data-track="start_application" type="button" onClick={handleNext}>
-          Continue →
+          {t.continue}
         </button>
       </div>
 
       {/* STEP 2 */}
       <div className={`form-step ${step === 2 ? "active" : ""}`}>
-        <h3>Vehicle Information</h3>
+        <h3>{t.vehicleTitle}</h3>
 
-        <input name="Number1" placeholder="Year" type="number" />
-        <input name="SingleLine" placeholder="Make" />
-        <input name="SingleLine1" placeholder="Model" />
-        <input name="Number2" placeholder="Mileage" type="number" />
-        <input name="SingleLine2" placeholder="Trim (optional)" />
+        <input name="Number1" placeholder={t.year} type="number" />
+        <input name="SingleLine" placeholder={t.make} />
+        <input name="SingleLine1" placeholder={t.model} />
+        <input name="Number2" placeholder={t.mileage} type="number" />
+        <input name="SingleLine2" placeholder={t.trim} />
 
         <select name="Dropdown1">
-          <option value="">Vehicle Paid Off?</option>
-          <option value="Yes">Yes</option>
-          <option value="No">No</option>
+          <option value="">{t.paidOff}</option>
+          <option value={t.yes}>{t.yes}</option>
+          <option value={t.no}>{t.no}</option>
         </select>
 
         <div className="terms">
           <input type="checkbox" name="TermsConditions" id="TermsConditions" />
-          <label htmlFor="TermsConditions">I accept the Terms and Conditions</label>
+          <label htmlFor="TermsConditions">{t.terms}</label>
         </div>
-
-        {error && <p className="form-error">{error}</p>}
+    
+        {error && <p className="form-error">{t.vehicleError}</p>}
 
         <div className="step-buttons">
           <button type="button" onClick={() => setStep(1)}>
-            ← Back
+            {t.back}
           </button>
-          <button data-track="submit_step1" type="submit">Get My Cash</button>
+          <button data-track="submit_step1" type="submit">{t.submit}</button>
         </div>
       </div>
     </form>

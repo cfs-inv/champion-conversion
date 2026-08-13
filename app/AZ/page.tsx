@@ -7,15 +7,15 @@ import { cities } from "@/app/data/cityData";
 import Image from "next/image";
 import { Metadata } from "next";
 import { Suspense } from "react";
-import Reviews from "./components/Reviews";
-import FinalCTA from "./components/FinalCTA";
+import Reviews from "@/app/components/Reviews";
+import FinalCTA from "@/app/components/FinalCTA";
 
-const cityData = cities.baseline;
+const cityData = cities.arizona;
 
 export const metadata: Metadata = {
-  title: "Car Title Loans Made Simple | Champion Cash Loans",
+  title: "Car Title Loans in Arizona | Champion Cash Loans",
   description:
-    "Apply online for a car title loan today. Get started online and keep driving your vehicle while making your payments.",
+    "Apply online for a car title loan in Arizona. Get started online and keep driving your vehicle while making your payments.",
 };
 
 export default function Home() {
@@ -105,7 +105,7 @@ export default function Home() {
 
   <Image
     src={cityData.heroImage}
-    alt="Car title loans made simple"
+    alt="Car title loans in Arizona"
     width={700}
     height={500}
     sizes="(max-width: 768px) 100vw, 50vw"
@@ -128,10 +128,10 @@ export default function Home() {
               <div className="champion-form-column">
                 <Suspense fallback={<div className="loan-form-loading" />}>
   <LoanForm
-    slug="baseline"
+    slug="california"
     attribution={{
       mainSource: "CFS Google Ads",
-      trafficSource: "conversion-champion",
+      trafficSource: "landing-arizona",
       brand: "Champion",
     }}
   />
@@ -144,7 +144,7 @@ export default function Home() {
 
 
  {/* =========================================================
-    CALIFORNIA LOCAL BANNER / SEO
+    ARIZONA LOCAL BANNER / SEO
 ========================================================= */}
 
 <section className="champion-local-section">

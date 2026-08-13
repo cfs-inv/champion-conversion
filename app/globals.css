@@ -1024,7 +1024,7 @@ margin-bottom: 0;
 .divider {
   position: relative;
   height: 1px;
-  background: #006738;
+  background: #bed2c9;
   margin: 24px 0 32px;
 }
 
@@ -2006,6 +2006,12 @@ text-align: left;
    Contact box
    ========================================================= */
 
+   .champion-contact-row {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 100px;
+}
+
 .champion-thank-you-contact {
   position: absolute;
   top: 25px;
@@ -2022,10 +2028,10 @@ text-align: left;
   border: 1px solid #f04236;
   border-radius: 48px;
 
-  font-family: "basic-sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 13px;
-  
 }
+
 
 .champion-thank-you-contact span {
   color: #393b3c;
@@ -2214,6 +2220,55 @@ text-align: left;
 
 .fade-in {
   animation: fadeUp .5s ease forwards; /* 👈 Agrega forwards aquí */
+}
+
+.champion-brand-heading {
+  display: grid;
+  grid-template-columns: auto auto 1fr auto;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+}
+
+.champion-brand {
+  display: flex;
+  align-items: center;
+}
+
+.champion-heading-divider {
+  width: 1px;
+  height: 50px;
+  background: #006738;
+}
+
+.champion-headline {
+  margin: 0;
+}
+
+.champion-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 3px;
+
+  padding: 18px 24px;
+
+  border: 1px solid #ef4036;
+  border-radius: 40px;
+
+  white-space: nowrap;
+}
+
+.champion-contact span {
+  color: #393b3c;
+  font-size: 11px;
+}
+
+.champion-contact a {
+  color: #006738;
+  font-size: 14px;
+  font-weight: 800;
+  text-decoration: none;
 }
 
 @keyframes fadeUp {
@@ -2634,7 +2689,7 @@ text-align: left;
   gap: 24px;
   width: fit-content;
   max-width: 100%;
-  margin: 10px auto 0;
+  margin: 40px auto 0;
 }
 
 .champion-headline {
@@ -3304,6 +3359,107 @@ text-align: left;
   color: #ef4036;
 }
 
+.legal-page {
+  background: #fff;
+  color: #222;
+  padding: 60px 20px 80px;
+}
+
+.legal-container {
+  width: min(900px, 100%);
+  margin: 0 auto;
+}
+
+.legal-language {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 30px;
+}
+
+.legal-language a {
+  color: #1a5a9c;
+  text-decoration: underline;
+  font-size: 0.95rem;
+}
+
+.legal-header {
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 30px;
+  margin-bottom: 40px;
+}
+
+.legal-header h1 {
+  margin: 0 0 12px;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  line-height: 1.15;
+}
+
+.legal-updated {
+  margin: 0;
+  color: #666;
+  font-size: 0.95rem;
+}
+
+.legal-content {
+  font-size: 0.98rem;
+  line-height: 1.75;
+}
+
+.legal-content p {
+  margin: 0 0 24px;
+}
+
+.legal-content h2 {
+  margin: 48px 0 18px;
+  font-size: 1.35rem;
+  line-height: 1.3;
+}
+
+.legal-content h3 {
+  margin: 30px 0 14px;
+  font-size: 1.05rem;
+  line-height: 1.4;
+}
+
+.legal-content ul,
+.legal-content ol {
+  margin: 0 0 24px 24px;
+  padding-left: 20px;
+}
+
+.legal-content li {
+  margin-bottom: 12px;
+}
+
+.legal-topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 35px;
+}
+
+.legal-back {
+  color: #333;
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.legal-back:hover {
+  text-decoration: underline;
+}
+
+.legal-language {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.legal-language a {
+  color: #1a5a9c;
+  text-decoration: underline;
+  font-size: 0.95rem;
+}
+
 @media(max-width:768px){
 
     .header{
@@ -3840,5 +3996,22 @@ min-width:100%;
   .review-card {
     width: 100%;
   
+  }
+
+  .champion-contact {
+    display: none;
+  }
+
+  .legal-page {
+    padding: 40px 18px 60px;
+  }
+
+  .legal-content {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .legal-content h2 {
+    margin-top: 38px;
   }
 }
