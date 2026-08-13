@@ -162,6 +162,7 @@ export default function LoanFormStep2() {
       {/* Cambia el valor vacío por la URL de App Completed */}
 <input type="hidden" name="zf_redirect_url" value="https://apply.championcashloans.com/appcompleted" />
       <input type="hidden" name="zc_gad" value="" />
+      <input type="hidden" name="SingleLine1" value={storedData.mainSource} />
       <input type="hidden" name="SingleLine7" value={leadUUID} />
       <input type="hidden" name="SingleLine8" value="Sent personal Info (Form 2)" />
       <input type="hidden" name="Name_First" value={storedData.firstName} />
