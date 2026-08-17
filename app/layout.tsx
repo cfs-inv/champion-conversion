@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import TermlyCMP from "./components/TermlyCMP";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,7 +21,18 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable}`}>
-      <body>{children}</body>
+
+      
+      <body suppressHydrationWarning>{children}
+
+        <TermlyCMP 
+          websiteUUID="11c18093-6df0-48c0-b10c-5e43c9134c49" 
+          autoBlock={true} 
+          masterConsentsOrigin="" 
+        />
+
+
+      </body>
     </html>
   );
 }
