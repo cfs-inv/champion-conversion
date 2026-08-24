@@ -271,7 +271,7 @@ return(
 
   <a href="/legal/donotsell">{t.privacy}</a>
   <a href="/legal/terms">{t.terms}</a>
-  <a href="/faq">{t.faqs}</a>
+  <a href="/legal/community">{t.faqs}</a>
   <a href="/legal/donotsell">{t.doNotSell}</a>
 
   <a
