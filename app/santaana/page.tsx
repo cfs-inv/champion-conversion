@@ -1,0 +1,273 @@
+
+import Footer from "@/app/components/Footer";
+import LoanForm from "@/app/components/LoanForm";
+import Steps from "@/app/components/Steps";
+import FAQAccordion from "@/app/components/FAQAccordion";
+import { cities } from "@/app/data/cityData";
+import Image from "next/image";
+import { Metadata } from "next";
+import { Suspense } from "react";
+import Reviews from "@/app/components/Reviews";
+import FinalCTA from "@/app/components/FinalCTA";
+
+const cityData = cities.california;
+
+export const metadata: Metadata = {
+  title: "Car Title Loans in California | Champion Cash Loans",
+  description:
+    "Apply online for a car title loan in California. Get started online and keep driving your vehicle while making your payments.",
+};
+
+export default function Home() {
+  const localFAQs = cityData.faqs;
+
+  return (
+    <>
+      <main className="champion-landing">
+
+        {/* =========================================================
+            HERO / HEADLINE
+        ========================================================= */}
+
+        <div className="champion-brand-heading">
+
+  <div className="champion-brand">
+    <Image
+      src="/images/championlogo_web.webp"
+      alt="Champion Cash Loans"
+      width={220}
+      height={60}
+      priority
+      className="champion-logo"
+    />
+  </div>
+
+  <span
+    className="champion-heading-divider"
+    aria-hidden="true"
+  />
+
+  <h1 className="champion-headline">
+    Car Title Loans{" "}
+    <span className="champion-headline-accent">
+      Made Simple.
+    </span>
+  </h1>
+
+  <div className="champion-contact">
+    <span>Questions about your application?</span>
+    <a href="tel:+18887981970">
+      ☎ CALL US (888) 798-1970
+    </a>
+  </div>
+
+</div>
+
+
+  {/* =====================================================
+                BENEFITS
+            ===================================================== */}
+
+            <div className="champion-container">
+
+  <div className="champion-highlights">
+
+              {cityData.localBenefits.map((benefit, index) => (
+                <div
+                  className="champion-highlight"
+                  key={index}
+                >
+                  <div className="champion-highlight-inner">
+
+                    <span className="champion-check">
+                      ✓
+                    </span>
+
+                    <span className="champion-highlight-text">
+                      {benefit}
+                    </span>
+
+                  </div>
+                </div>
+              ))}
+
+            </div>
+
+            {/* =====================================================
+                IMAGE + FORM
+            ===================================================== */}
+
+            <div className="champion-conversion-grid">
+
+              <div className="champion-image-column">
+
+
+
+  <Image
+    src={cityData.heroImage}
+    alt="Car title loans in California"
+    width={700}
+    height={500}
+    sizes="(max-width: 768px) 100vw, 50vw"
+    className="champion-hero-image"
+    priority
+  />
+
+  <div className="champion-image-copy">
+    <h2>Get started today.</h2>
+    <p>
+      Complete your application online and see what options may be available.
+    </p>
+   <p className="disclaimer">
+     *Same-day funding is subject to availability and may vary based on application review and bank processing.
+   </p>
+  </div>
+
+</div>
+
+              <div className="champion-form-column">
+                <Suspense fallback={<div className="loan-form-loading" />}>
+  <LoanForm
+    slug="california"
+    attribution={{
+      mainSource: "GMB",
+      trafficSource: "landing-costaazul",
+      brand: "Champion",
+      partner: "Costa Azul",
+      location: "Santa Ana"
+    }}
+  />
+</Suspense>
+              </div>
+
+            </div>
+
+          </div>
+
+
+ {/* =========================================================
+    CALIFORNIA LOCAL BANNER / SEO
+========================================================= */}
+
+<section className="champion-local-section">
+  <div className="champion-container">
+
+    <div className="champion-local-banner">
+
+      {/* VISUAL */}
+      <div className="champion-local-image">
+        <Image
+          src={cityData.cityBadgeImage}
+          alt={`${cityData.cityName} Champion Cash Loans`}
+          width={300}
+          height={180}
+        />
+      </div>
+
+      {/* CONTENT */}
+      <div className="champion-local-content">
+
+        <h2 className="champion-section-title">
+          {cityData.seoHeading}
+        </h2>
+
+        <p className="champion-local-paragraph">
+          {cityData.localSEOParagraph}
+        </p>
+
+        <p className="champion-local-disclaimer">
+          {cityData.regulationsText}
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<Reviews
+  reviews={cityData.reviews}
+  lang="en"
+/>
+
+
+        {/* =========================================================
+            STEPS + FAQ
+        ========================================================= */}
+
+        <section className="champion-information">
+
+          <div className="champion-container">
+
+            <div className="champion-information-grid">
+
+              {/* =========================
+                  HOW IT WORKS
+              ========================= */}
+
+              <div className="champion-steps-column">
+
+                <h2 className="champion-section-title">
+                  How It Works
+                </h2>
+
+                <Steps lang="en" />
+
+              </div>
+
+
+              {/* =========================
+                  FAQ
+              ========================= */}
+
+              <div className="champion-faq-column">
+
+                <h2 className="champion-section-title">
+                  {cityData.faqTitle}
+                </h2>
+
+                <FAQAccordion
+                  items={localFAQs}
+                />
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </section>
+
+
+        {/* =========================================================
+            FAQ STRUCTURED DATA
+        ========================================================= */}
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: localFAQs.map((faq) => ({
+                "@type": "Question",
+                name: faq.question,
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: faq.answer,
+                },
+              })),
+            }),
+          }}
+        />
+
+        <FinalCTA />
+
+      
+      </main>
+
+      <Footer lang="en" />
+    </>
+  );
+}
