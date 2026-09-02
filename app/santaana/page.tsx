@@ -130,8 +130,8 @@ export default function Home() {
   <LoanForm
     slug="california"
     attribution={{
-      mainSource: "GMB",
-      trafficSource: "landing-costaazul",
+      mainSource: "Partner",
+      trafficSource: "walk-in",
       brand: "Champion",
       partner: "Costa Azul",
       location: "Santa Ana"
