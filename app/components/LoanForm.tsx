@@ -86,6 +86,11 @@ export default function LoanForm({
   },
 };
 
+
+const modelLooksLikeAddress = (value: string) => {
+  return /^\d+\s+.+\b(street|st|avenue|ave|road|rd|drive|dr|lane|ln|boulevard|blvd|court|ct|parkway|pkwy|highway|hwy)\b/i.test(value);
+};
+
 const t = translations[lang];
 
   const searchParams = useSearchParams();
@@ -137,7 +142,7 @@ const t = translations[lang];
   };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-    // 1. Evitamos la redirección inmediata para asegurar la escritura en memoria
+
     e.preventDefault();
     
     const form = formRef.current;
@@ -154,7 +159,16 @@ const t = translations[lang];
       return;
     }
 
-    // Recuperamos limpiamente los datos del Paso 1 que siguen en el DOM
+
+if (modelLooksLikeAddress(model)) {
+  setError(
+    lang === "es"
+      ? "Parece que ingresaste una dirección en el campo de modelo. Por favor verifica la información de tu vehículo."
+      : "It looks like you entered an address in the vehicle model field. Please check your vehicle information."
+  );
+  return;
+}
+
     const nameFirst = (form.elements.namedItem("Name_First") as HTMLInputElement)?.value.trim();
     const nameLast = (form.elements.namedItem("Name_Last") as HTMLInputElement)?.value.trim();
     const email = (form.elements.namedItem("Email") as HTMLInputElement)?.value.trim();
@@ -174,7 +188,6 @@ const t = translations[lang];
 
     setError("");
 
-    // SOLUCIÓN PARA MÓVILES: Retrasar el envío nativo para asegurar la escritura en disco
     setTimeout(() => {
       form.submit();
     }, 150); 
@@ -286,8 +299,20 @@ const t = translations[lang];
         <h3>{t.vehicleTitle}</h3>
 
         <input name="Number1" placeholder={t.year} type="number" />
-        <input name="SingleLine" placeholder={t.make} />
-        <input name="SingleLine1" placeholder={t.model} />
+
+        <input
+  name="SingleLine"
+  placeholder={t.make}
+  autoComplete="off"
+/>
+
+<input
+  name="SingleLine1"
+  placeholder={t.model}
+  maxLength={40}
+  autoComplete="off"
+/>
+
         <input name="Number2" placeholder={t.mileage} type="number" />
         <input name="SingleLine2" placeholder={t.trim} />
 
@@ -302,7 +327,7 @@ const t = translations[lang];
           <label htmlFor="TermsConditions">{t.terms}</label>
         </div>
     
-        {error && <p className="form-error">{t.vehicleError}</p>}
+        {error && <p className="form-error">{error}</p>}
 
         <div className="step-buttons">
           <button type="button" onClick={() => setStep(1)}>
