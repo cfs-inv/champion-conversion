@@ -4,8 +4,10 @@ import { useState } from "react";
 
 export default function Footer({
   lang = "en",
+  variant = "default",
 }: {
   lang?: "en" | "es";
+  variant?: "default" | "thankYou";
 }) {
 
   const translations = {
@@ -185,7 +187,7 @@ const [open,setOpen] = useState(false);
 
 return(
 
-<footer className="footer">
+<footer className={`footer ${variant === "thankYou" ? "footer-thank-you" : ""}`}>
 
 <div className="footer-container">
 
