@@ -1,4 +1,4 @@
-import Footer from "./Footer";
+import Footer from "../components/Footer";
 
 export default function AppReceivedContent() {
   return (
@@ -28,14 +28,14 @@ export default function AppReceivedContent() {
             href="tel:1-888-798-1970"
             className="thank-you-button"
           >
-            Call Us Now!
+            (888) 798-1970
           </a>
 
         </div>
 
       </main>
 
-     <Footer variant="thankYou" />
+      <Footer variant="thankYou" />
 
     </section>
   );
