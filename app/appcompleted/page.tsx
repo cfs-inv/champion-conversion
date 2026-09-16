@@ -30,10 +30,9 @@ export default function FinalThankYouPage() {
             <h2>What Happens Next</h2>
 
             <p>
-              Our team will begin reviewing your information and
-              will contact you if any additional documentation
-              or verification is needed.
+              Our team will contact you in the next 10 to 15 minutes. <b>Keep an eye out for calls from <span className="champion-final-phone">(888) 798-1970</span>,</b> as we may need to verify your information or request additional documents.
             </p>
+          
           </div>
         </article>
 
@@ -89,6 +88,16 @@ export default function FinalThankYouPage() {
         </article>
       
       </section>
+
+      <section className="champion-final-hours">
+  <h2>Our Hours of Operation</h2>
+  <p>
+    Our team is available Monday through Saturday, from 9:00 AM to 7:00 PM. And Sundays from 9:00 AM to 2:00 PM. 
+    Applications submitted outside of business hours may receive a call
+    on the next business day.
+  </p>
+</section>
+
     </main>
 
     <Footer />

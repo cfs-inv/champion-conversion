@@ -3634,6 +3634,41 @@ text-align: left;
   color: #2b2b5e;
 }
 
+/* Highlight the incoming call number */
+.champion-final-phone {
+  display: inline-block;
+  font-weight: 700;
+  white-space: nowrap;
+  padding: 2px 14px;
+  border-radius: 5px;
+  background: rgba(39, 143, 95, 0.24);
+}
+
+/* Business hours / after-hours notice */
+.champion-final-hours {
+  max-width: 850px;
+  margin: 42px auto 0;
+  padding: 20px 24px;
+  text-align: center;
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.champion-final-hours h2 {
+  margin: 0 0 8px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #252c3e;
+}
+
+.champion-final-hours p {
+  margin: 0 auto;
+  max-width: 700px;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  opacity: 0.75;
+  color: #252c3e;
+}
+
 @media(max-width:768px){
 
     .header{
