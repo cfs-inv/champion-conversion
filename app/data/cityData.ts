@@ -95,9 +95,7 @@ export const cities = {
 
   localSEOParagraph: `Whether you live in Downtown Phoenix, Camelback East, Ahwatukee,
 North Mountain, or nearby communities, you can complete your application online without
-visiting a physical location. To qualify, your vehicle should have more than 70% of its
-current value paid off. If approved, you'll keep driving your vehicle while making your
-scheduled payments.`,
+visiting a physical location.`,
 
     localBenefits: [
   "Get up to 80% of your car's value in cash.",
