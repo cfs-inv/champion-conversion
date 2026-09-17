@@ -93,10 +93,11 @@ export const cities = {
 
     seoHeading: "Here for Arizona Drivers Since 2019",
 
-    localSEOParagraph: `Whether you live in Downtown Phoenix, Camelback East, Ahwatukee,
+  localSEOParagraph: `Whether you live in Downtown Phoenix, Camelback East, Ahwatukee,
 North Mountain, or nearby communities, you can complete your application online without
-visiting a physical location. If approved, you'll keep driving your vehicle while making
-your scheduled payments.`,
+visiting a physical location. To qualify, your vehicle should have more than 70% of its
+current value paid off. If approved, you'll keep driving your vehicle while making your
+scheduled payments.`,
 
     localBenefits: [
   "Get up to 80% of your car's value in cash.",
@@ -106,7 +107,7 @@ your scheduled payments.`,
 ],
 
     regulationsText:
-      "Loan approval, loan amounts, rates, and terms are subject to underwriting and applicable Arizona law. Actual APR, payment amount, and repayment terms vary by applicant.",
+      "Loan approval, loan amounts, rates, and terms are subject to underwriting and applicable Arizona law. Actual APR, payment amount, and repayment terms vary by applicant. To qualify, you’ll generally need to have more than 70% of your vehicle’s value paid off.",
 
     faqTitle: "We keep things simple from start to finish",
 
