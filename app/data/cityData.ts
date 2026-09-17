@@ -95,7 +95,7 @@ export const cities = {
 
   localSEOParagraph: `Whether you live in Downtown Phoenix, Camelback East, Ahwatukee,
 North Mountain, or nearby communities, you can complete your application online without
-visiting a physical location.`,
+visiting a physical location. You’ll generally need to have most of your vehicle paid off to qualify. If approved, you’ll keep driving your vehicle while making your scheduled payments.`,
 
     localBenefits: [
   "Get up to 80% of your car's value in cash.",
@@ -105,7 +105,7 @@ visiting a physical location.`,
 ],
 
     regulationsText:
-      "Loan approval, loan amounts, rates, and terms are subject to underwriting and applicable Arizona law. Actual APR, payment amount, and repayment terms vary by applicant. To qualify, you’ll generally need to have more than 70% of your vehicle’s value paid off.",
+      "Loan approval, loan amounts, rates, and terms are subject to underwriting and applicable Arizona law. Actual APR, payment amount, and repayment terms vary by applicant. *Eligibility requirements apply. Generally, applicants must have more than 70% of the vehicle’s value paid off. Additional vehicle, loan, and credit requirements may apply.",
 
     faqTitle: "We keep things simple from start to finish",
 
