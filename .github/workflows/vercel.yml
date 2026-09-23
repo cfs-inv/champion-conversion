@@ -1,0 +1,29 @@
+﻿name: Vercel Deploy
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+env:
+  VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+  VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 24
+      - run: npm i -g vercel@latest
+      - name: Deploy
+        env:
+          VERCEL_ENV: ${{ github.event_name == 'push' && 'production' || 'preview' }}
+          PROD: ${{ github.event_name == 'push' && '--prod' || '' }}
+          TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: |
+          vercel pull --yes --environment=$VERCEL_ENV --token=$TOKEN
+          vercel build $PROD --token=$TOKEN
+          vercel deploy --prebuilt $PROD --token=$TOKEN
