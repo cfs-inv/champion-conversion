@@ -188,6 +188,8 @@ if (modelLooksLikeAddress(model)) {
 
     setError("");
 
+    sessionStorage.setItem("application_submitted", "true");
+
     setTimeout(() => {
       form.submit();
     }, 150); 

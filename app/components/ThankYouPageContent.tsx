@@ -1,11 +1,25 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import SecondForm from "@/app/components/SecondForm";
 import LoanTimeline from "../components/LoanTimeline";
 
 export default function ThankYouPageContent() {
   const [showForm, setShowForm] = useState(false);
+
+  useEffect(() => {
+  const submitted = sessionStorage.getItem("application_submitted");
+
+  if (submitted === "true") {
+    window.oaiq?.(
+      "measure",
+      "registration_completed",
+      { type: "customer_action" }
+    );
+
+    sessionStorage.removeItem("application_submitted");
+  }
+}, []);
 
   return (
    <section className="champion-thank-you">
