@@ -7,10 +7,10 @@ export default function OpenAIPixel() {
     if (window.oaiq) return;
 
     const q = (...args: any[]) => {
-      q.q.push(args);
+    q.q.push(args);
     };
 
-    q.q = [];
+    q.q = [] as any[];
 
     window.oaiq = q;
 
