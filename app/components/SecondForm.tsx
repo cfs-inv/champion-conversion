@@ -2,6 +2,8 @@
 
 import { useState, useRef, useEffect } from "react";
 
+const LEAD_API = "https://lead-intake-3xqp.vercel.app";
+
 export default function LoanFormStep2() {
   const formRef = useRef<HTMLFormElement>(null);
 
@@ -9,6 +11,7 @@ export default function LoanFormStep2() {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(true);
   const [leadUUID, setLeadUUID] = useState("");
+  const [submitting, setSubmitting] = useState(false);
   
 
   const [storedData, setStoredData] = useState({
@@ -75,6 +78,22 @@ export default function LoanFormStep2() {
 };
 
   useEffect(() => {
+    // Link del correo (?t=<LeadUUID>): los datos vienen de Zoho, no de este navegador.
+    const t = new URLSearchParams(window.location.search).get("t");
+    if (t) {
+      fetch(`${LEAD_API}/api/long-form?t=${encodeURIComponent(t)}`)
+        .then((r) => r.json())
+        .then((j) => {
+          if (!j.ok) throw new Error(j.error);
+          const l = j.lead;
+          setLeadUUID(t);
+          setStoredData((d) => ({ ...d, firstName: l.firstName ?? "", lastName: l.lastName ?? "", phone: l.phone ?? "", email: l.email ?? "", state: l.state ?? "" }));
+          setLoading(false);
+        })
+        .catch(() => loadFreshLocalStorageData());
+      return;
+    }
+
     // 1. Carga inicial al montar el componente
     loadFreshLocalStorageData();
 
@@ -124,19 +143,54 @@ export default function LoanFormStep2() {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
     const form = formRef.current;
-    if (!form) return;
+    if (!form || submitting) return;
 
     const terms = (form.querySelector('[name="TermsConditions"]') as HTMLInputElement)?.checked;
 
     if (!empYears || !terms) {
-      e.preventDefault();
       setError("Please complete your employment duration and accept the Terms and Conditions.");
       return;
     }
-    
     setError("");
+    setSubmitting(true);
+
+    // Nombres de campo de Zoho (Leads). La API solo escribe los que tiene permitidos.
+    const payload = {
+      t: leadUUID,
+      source: "web-step2",
+      form: {
+        Amount_desired1: amount, DOB: finalDob, SSN1: ssn, Street: street, City: city, Zip_Code: zipCode,
+        Years_in_residence: resYears, Months_in_residence: resMonths,
+        homeowner: rentOrOwn === "-Select-" ? "" : rentOrOwn, Rent: rentAmount, Occupation: occupation,
+        Year_in_employment: empYears, timeEmpMo: empMonths, Monthly_income: salary,
+        employment_info: employerName, Employer_Phone: employerPhone, Employment_Address: employerAddress,
+        termsAccepted: true,
+      },
+    };
+
+    // Si el paso 1 se mandó hace segundos, Zoho puede no tener el lead todavía (404): reintenta.
+    for (let i = 0; leadUUID && i < 4; i++) {
+      try {
+        const r = await fetch(`${LEAD_API}/api/long-form`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+        });
+        if (r.ok) {
+          window.location.href = "/appcompleted";
+          return;
+        }
+        if (r.status !== 404) break;
+      } catch {
+        break;
+      }
+      await new Promise((res) => setTimeout(res, 4000));
+    }
+    // ponytail: si la API falla, se manda como antes por Zoho Forms para no perder la solicitud.
+    form.submit();
   };
 
   if (loading) {
@@ -315,7 +369,7 @@ export default function LoanFormStep2() {
           {error && <p className="form-error">{error}</p>}
           <div className="step-buttons">
             <button type="button" onClick={() => setStep(2)}>← Back</button>
-            <button data-track="submit_step2" type="submit">Submit Application</button>
+            <button data-track="submit_step2" type="submit" disabled={submitting}>{submitting ? "Submitting..." : "Submit Application"}</button>
           </div>
         </div>
       )}
