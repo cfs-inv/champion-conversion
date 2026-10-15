@@ -1,4 +1,3 @@
-import Navbar from "@/app/components/Navbar";
 import Footer from "@/app/components/Footer";
 import LoanTimeline from "@/app/components/LoanTimeline";
 import SecondForm from "@/app/components/SecondForm";
@@ -10,7 +9,6 @@ export const metadata = { robots: { index: false } };
 export default function ContinuePage() {
   return (
     <>
-      <Navbar />
       <main>
         <section className="thank-you-page">
           <LoanTimeline currentStep={2} />
