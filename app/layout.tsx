@@ -4,6 +4,7 @@ import "./globals.css";
 import TermlyCMP from "./components/TermlyCMP";
 import { GoogleTagManager } from "@next/third-parties/google";
 import OpenAIPixel from "./components/OpenAIPixel";
+import MetaPixel from './components/MetaPixel';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,6 +34,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
 
         <OpenAIPixel />
+        <MetaPixel />
 
         {children}
       </body>
